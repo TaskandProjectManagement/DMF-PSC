@@ -248,6 +248,8 @@ textarea{display:block;width:100%;box-sizing:border-box;margin-top:3px;padding:7
 @media(min-width:601px) and (max-width:1180px){.tb #vs span{display:none}.tb #vs .on span{display:inline}.tb .mstg span{display:none}.tb .vsep{display:none}.tb h1{font-size:17px}}
 .dpw{display:flex;flex-wrap:wrap;gap:6px;align-items:center;flex:1 1 100%}.dpw .dpt{flex:0 0 auto;font-size:12px;padding:5px 4px;margin:0;color:var(--ac);font-weight:600}.dpw .dpp{flex:1 1 220px;font-size:12px;padding:5px 4px;margin:0;color:var(--mut);min-width:0}.dpw .dpp.on{color:var(--ac);border-color:var(--ac);font-weight:600}.dpw .dplw{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--mut)}.dpw .dpl{width:60px;margin:0;padding:5px 6px;text-align:center}
 .mdepw{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:-4px 0 12px;font-size:12px}
+.dpw .dpc{flex:1 1 220px;min-width:0;text-align:left;font:inherit;font-size:12px;padding:5px 24px 5px 8px;margin:0;color:var(--mut);background:var(--bg);border:1px solid var(--ln);border-radius:8px;cursor:pointer;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dpw .dpc:after{content:'\25BE';position:absolute;right:8px;top:50%;transform:translateY(-50%);opacity:.6}.dpw .dpc.on{color:var(--ac);border-color:var(--ac);font-weight:600}.dpw .dpc:focus-visible{outline:2px solid var(--ac);outline-offset:1px}
+.dpop{position:fixed;z-index:40;background:var(--pn);color:var(--fg);border:1px solid var(--ln);border-radius:10px;box-shadow:0 8px 24px #0005;padding:8px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px}.dpop .cbs{margin:0;font-size:13px}.dpop .cbl{overflow-y:auto;overscroll-behavior:contain;min-height:60px}.dpop .cbg{position:sticky;top:0;background:var(--pn);font-size:11px;font-weight:700;color:var(--ac);padding:6px 6px 3px;z-index:1}.dpop .cbi{padding:6px 8px;border-radius:7px;cursor:pointer;font-size:13px;display:flex;flex-direction:column;gap:1px;word-break:break-word}.dpop .cbi.hi{background:var(--pn2)}.dpop .cbi.cur{color:var(--ac);font-weight:600}.dpop .cbi small{color:var(--mut);font-size:11px;font-weight:400}.dpop mark{background:#ffd54a99;color:inherit;border-radius:3px;padding:0 1px}.dpop .cbe{padding:12px;color:var(--mut);font-size:12px;text-align:center}.dpop .cbh{font-size:10.5px;color:var(--mut);text-align:right}
 .dephelp{margin:0 0 10px;font-size:12px;color:var(--mut);background:var(--pn2);border-radius:8px;padding:6px 10px}.dephelp summary{cursor:pointer;color:var(--ac);font-weight:600}.dephelp ul{margin:6px 0;padding-left:18px}.dephelp p{margin:6px 0}
 .dl.upr{left:auto;right:0;top:auto;bottom:100%;transform:none;margin:0 2px 2px 0;line-height:1.1;font-weight:600;color:var(--fg);opacity:.75}
 .fsdt{color:var(--ac)!important;font-weight:500}
@@ -256,6 +258,13 @@ textarea{display:block;width:100%;box-sizing:border-box;margin-top:3px;padding:7
 .dl.a.up{right:auto;left:0;top:auto;bottom:100%;transform:none;margin:0 0 2px 2px;line-height:1.1;font-weight:600;color:var(--fg);opacity:.75}
 svg.fsl{position:absolute;left:0;top:0;pointer-events:none;z-index:0;overflow:visible}
 .tbR{display:flex;gap:6px;align-items:center;flex:none;white-space:nowrap}
+.ubtn{padding:5px 9px;font-size:15px;line-height:1}.ubtn:disabled{opacity:.35;cursor:default;border-color:var(--ln)}
+.fchips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:6px 16px;background:var(--pn);border-bottom:1px solid var(--ln);font-size:12px}.fchip{border-radius:99px;padding:2px 10px;font-size:12px;margin:0;border:1.5px solid var(--ac);background:var(--bg);color:var(--fg);cursor:pointer}.fchip b{font-weight:600;color:var(--mut);margin-left:2px}.fchip:hover b{color:var(--red)}.fchip.fcall{border-style:dashed;border-color:var(--ln);color:var(--mut)}
+#fltPop .fx{border:1px solid var(--ln);border-radius:10px;margin:4px 0;background:var(--bg)}#fltPop .fxh{display:flex;align-items:center;gap:8px;width:100%;border:0;background:transparent;border-radius:10px;padding:7px 10px;font-size:13px;font-weight:600;color:var(--fg);text-align:left;white-space:normal;cursor:pointer;margin:0}#fltPop .fxh .fxs{flex:1;font-weight:400;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:right}#fltPop .fxh.act .fxs{color:var(--ac);font-weight:600}#fltPop .fxa{transition:transform .15s;color:var(--mut)}#fltPop .fx.open .fxa{transform:rotate(180deg)}#fltPop .fxb{display:none;padding:0 8px 8px}#fltPop .fx.open .fxb{display:block}#fltPop .fxtools{display:flex;gap:6px;align-items:center;margin-bottom:6px}#fltPop .fxq{flex:1;min-width:0;margin:0;font-size:13px;padding:5px 8px}#fltPop .fxc{padding:3px 10px;font-size:12px;border-radius:8px;margin:0}#fltPop .fxl{max-height:220px;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:1px}#fltPop .fxi{display:flex;align-items:center;gap:8px;padding:5px 6px;border-radius:7px;cursor:pointer;font-size:13px;margin:0;font-weight:400;color:var(--fg)}#fltPop .fxi:hover{background:var(--pn2)}#fltPop .fxi input{width:auto;margin:0;flex:none}#fltPop .fxi .dot{width:9px;height:9px;border-radius:50%;flex:none}#fltPop .fxe{padding:8px;text-align:center;color:var(--mut);font-size:12px}
+.ceb.on{border-color:var(--ac);color:var(--ac)}
+.md.fxs [data-g="m"],.md.fxm [data-g="s"]{display:none!important}.md.fxs [data-g="s"]:not(#subs):not(.dephelp){display:none!important}.md.fxs #subs>.sr:not(.cur){display:none!important}.md.fxs .sr.cur [data-mv],.md.fxs #dl{display:none}.fxn{margin:-4px 0 10px}
+.sr.flash{animation:srflash 1.8s ease}@keyframes srflash{0%,65%{background:color-mix(in srgb,var(--ac) 20%,transparent);box-shadow:0 0 0 2px var(--ac)}100%{background:transparent;box-shadow:0 0 0 0 transparent}}
+.dpw .dpr{margin:0;padding:3px 8px;flex:0 0 auto;color:var(--red)}.dpa{font-size:12px;padding:3px 10px;margin:0;color:var(--ac);align-self:flex-start}
 @media(min-width:601px){.tb{gap:6px 8px;padding:10px 14px}.tb h1{margin-right:4px}#thBtn{padding:5px 9px}.tb #rl{min-width:0;padding:0 2px}.tb .nv{gap:2px}.tb .nv .nvi{width:28px;height:28px}.tb .nv #td{padding:5px 11px}.tb .seg button{padding:4px 10px}.tb .mstg{padding:5px 9px}#vmBtn{padding:5px 10px}#moreBtn{padding:6px 10px}}
 .mstg{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;font-weight:600;color:var(--ac);border-radius:9px;padding:5px 10px}
 @media(max-width:600px){.mstg span{display:none}.mstg{padding:5px 8px}}</style></head>
@@ -269,7 +278,7 @@ svg.fsl{position:absolute;left:0;top:0;pointer-events:none;z-index:0;overflow:vi
  <span class="vsep" id="nvSep"></span>
  <div class="nv"><button id="td" title="กลับไปวันนี้">วันนี้</button><button id="pv" class="nvi" aria-label="ก่อนหน้า" title="ก่อนหน้า">‹</button><button id="nx" class="nvi" aria-label="ถัดไป" title="ถัดไป">›</button><span id="rl"></span></div>
  <span class="sp"></span><span class="st" id="st"></span>
- <div class="tbR"><div class="fbwrap" id="moreWrap"><button class="fbbtn" id="moreBtn">💾 บันทึก ▾</button><div class="fbpop" id="morePop">
+ <div class="tbR"><button type="button" id="ceBtn" class="ubtn ceb" style="display:none" aria-pressed="true">✏️</button><span id="ugrp" style="display:none;gap:4px"><button type="button" id="undoBtn" class="ubtn" disabled aria-label="ย้อนกลับ" title="ย้อนกลับ (Ctrl+Z)">↩</button><button type="button" id="redoBtn" class="ubtn" disabled aria-label="ทำซ้ำ" title="ทำซ้ำ (Ctrl+Shift+Z)">↪</button></span><div class="fbwrap" id="moreWrap"><button class="fbbtn" id="moreBtn">💾 บันทึก ▾</button><div class="fbpop" id="morePop">
   <div class="mh">📄 PDF</div><button data-act="pdf:task">งานทั้งหมด</button><button data-act="pdf:person">รายบุคคล</button><button data-act="pdf:grid">บันทึก Grid</button><hr>
   <div class="mh">📊 Excel/CSV</div><button data-act="csv:task">งานทั้งหมด</button><button data-act="csv:person">รายบุคคล</button><hr>
   <div class="mh">💾 สำรองข้อมูล</div><button data-act="bk:export">ดาวน์โหลดไฟล์สำรอง (.json)</button><button data-act="bk:import" id="mImp">นำเข้าไฟล์สำรอง…</button>
@@ -281,14 +290,15 @@ svg.fsl{position:absolute;left:0;top:0;pointer-events:none;z-index:0;overflow:vi
  <input id="sq" class="sqinp" placeholder="🔍 ค้นหาชื่องาน">
  <div class="fbwrap" id="vwWrap"><button class="fbbtn" id="vwBtn">👁 การแสดงผล ▾</button><div class="fbpop" id="vwPop"><button id="ca"></button><button id="sh" style="display:none"></button></div></div><div class="fbwrap" id="mgWrap"><button class="fbbtn" id="mgBtn">⚙️ จัดการ ▾</button><div class="fbpop" id="mgPop"><button id="tm">👥 เพิ่มรายชื่อ</button><button id="tgm">🏷️ เพิ่มแท็ก</button><button id="trBtn">🗑 ถังขยะ</button></div></div>
  <div class="fbwrap" id="fltWrap"><button class="fbbtn" id="fltBtn">🔎 ตัวกรอง ▾</button><div class="fbpop" id="fltPop">
-  <div id="pfWrap"><div class="mh">👤 ชื่อคน</div><div class="fsec" id="pfPop"></div></div>
-  <div id="tfWrap"><div class="mh">🏷️ แท็ก <span class="mut">(เลือกได้หลายอัน)</span></div><div class="fsec" id="tfPop"></div></div>
+  <div id="pfWrap" class="fx"><button type="button" class="fxh" data-fx="p" aria-expanded="false"><span class="fxt">👤 ชื่อคน</span><span class="fxs mut">ทุกคน</span><span class="fxa">▾</span></button><div class="fxb"><div class="fxtools"><input class="fxq" data-fq="p" placeholder="🔍 ค้นหาชื่อ…" autocomplete="off"><button type="button" class="fxc" data-fc="p">ล้าง</button></div><div class="fxl" id="pfPop"></div></div></div>
+  <div id="tfWrap" class="fx"><button type="button" class="fxh" data-fx="t" aria-expanded="false"><span class="fxt">🏷️ แท็ก</span><span class="fxs mut">ทั้งหมด</span><span class="fxa">▾</span></button><div class="fxb"><div class="fxtools"><input class="fxq" data-fq="t" placeholder="🔍 ค้นหาแท็ก…" autocomplete="off"><button type="button" class="fxc" data-fc="t">ล้าง</button></div><div class="fxl" id="tfPop"></div></div></div>
   <div id="sfWrap"><div class="mh">📌 สถานะ <span class="mut">(เลือกได้หลายอัน)</span></div><div class="fsec" id="sfPop"></div></div>
   <button type="button" id="fltClr" class="del">ล้างตัวกรองทั้งหมด</button>
  </div></div>
  <button id="logBtn" style="display:none" title="ประวัติการแก้ไข">🕘 ประวัติ</button>
  <button id="owBtn" title="งานที่อยู่ในช่วงเวลาปัจจุบัน">⏳ On Working</button>
 </div>
+<div class="fchips" id="fchips" style="display:none"></div>
 <div class="sc" id="sc"></div><div id="dgTip" class="dgtip" hidden></div>
 </div>
 <script>
@@ -310,7 +320,7 @@ const measTitle=t=>{cv.font='600 15px "IBM Plex Sans Thai","Noto Sans Thai",sans
 const measOwn=t=>{cv.font='400 12px "IBM Plex Sans Thai","Noto Sans Thai",sans-serif';return cv.measureText(t).width};
 const chips=a=>(a||[]).map(o=>{const pc=PCOLORS[o];return pc?`<span class="chip" style="background:${pc};color:${textForHex(pc)}">${esc(o)}</span>`:`<span class="chip">${esc(o)}</span>`}).join('');
 const hue=id=>{let h=0;for(const c of String(id))h=(h*31+c.charCodeAt(0))%360;return h};
-let view='month',anchor=Math.floor(now()),tasks=[],db=null,canW=true,col=new Set(),status='กำลังเชื่อมต่อ…',G={ws:0,p:1,lw:250},sup=0,pf='',showH=false,people=[],tags=[],tf=new Set(),sf=new Set(),mode='task',VIS=[],boardTitle='ตารางงานทีม',sq='',userNS=null,myId=null,logEntries=[],newLogs=[],pcMap={},theme='auto',mt='',calItems=[],calSel=new Set(),calLong=false,trashItems=[],trashLocal=[];
+let view='month',anchor=Math.floor(now()),tasks=[],db=null,canW=true,col=new Set(),status='กำลังเชื่อมต่อ…',G={ws:0,p:1,lw:250},sup=0,pfs=new Set(),showH=false,people=[],tags=[],tf=new Set(),sf=new Set(),mode='task',VIS=[],boardTitle='ตารางงานทีม',sq='',userNS=null,myId=null,logEntries=[],newLogs=[],pcMap={},theme='auto',mt='',calItems=[],calSel=new Set(),calLong=false,trashItems=[],trashLocal=[];
 const CH=[null,0,15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240,255,270,285,300,315,330,345,'g0','g1','g2','g3','g4','g5'];
 const GR=[[12,32],[24,44],[36,56],[50,70],[64,82],[78,92]];
 const isGray=h=>typeof h==='string'&&h[0]=='g';
@@ -344,13 +354,13 @@ const ST={ok:'อยู่ในกำหนด',active:'Active',done:'งาน
  badge=x=>(!x._occ&&isRep(x)&&repSt(x)=='late')?`<span class="bg auto" style="color:var(--s-late)" title="มีรอบที่ผ่านไปแล้วแต่ยังไม่ได้ติ๊กว่าทำแล้ว">⚠ ขาด ${occMissed(x).length} รอบ</span>`:autoLate(x)?`<span class="bg auto" style="color:var(--s-late)" title="เลยวันสิ้นสุดแล้วแต่ยังไม่ได้ตั้งเป็น “เสร็จแล้ว” (ระบบแสดงให้อัตโนมัติ ข้อมูลที่บันทึกไว้ยังเป็น “${ST[rawSt(x)]}”)">⚠ เลยกำหนด</span>`:`<span class="bg" style="color:var(--s-${st(x)})">${ST[st(x)]}</span>`;
 try{const v=sessionStorage.getItem('v');if(ALLV.includes(v))view=v}catch(e){}
 try{const tv=sessionStorage.getItem('theme');if(['light','dark','auto'].includes(tv))theme=tv}catch(e){}
-const PK='teamboard.prefs.v1';
+const PK='teamboard.prefs.v1';let clickEdit=true,fxOpen={p:false,t:false},fxQ={p:'',t:''},fltP=[];const pfOk=a=>!pfs.size||(a||[]).some(n=>pfs.has(n));
 try{const P0=JSON.parse(localStorage.getItem(PK)||'null');if(P0&&typeof P0=='object'){
  if(ALLV.includes(P0.view))view=P0.view;if(['task','person'].includes(P0.mode))mode=P0.mode;if(['light','dark','auto'].includes(P0.theme))theme=P0.theme;
- if(typeof P0.pf=='string')pf=P0.pf;if(typeof P0.mt=='string')mt=P0.mt;if(Array.isArray(P0.tf))tf=new Set(P0.tf);if(Array.isArray(P0.sf))sf=new Set(P0.sf.filter(k=>k in ST));
- if(Array.isArray(P0.col))col=new Set(P0.col);if(typeof P0.showH=='boolean')showH=P0.showH;if(Array.isArray(P0.calSel))calSel=new Set(P0.calSel.slice(0,1));if(typeof P0.calLong=='boolean')calLong=P0.calLong}}catch(e){}
+ if(Array.isArray(P0.pfs))pfs=new Set(P0.pfs.filter(x=>typeof x=='string'));else if(typeof P0.pf=='string'&&P0.pf)pfs=new Set([P0.pf]);if(typeof P0.mt=='string')mt=P0.mt;if(Array.isArray(P0.tf))tf=new Set(P0.tf);if(Array.isArray(P0.sf))sf=new Set(P0.sf.filter(k=>k in ST));
+ if(Array.isArray(P0.col))col=new Set(P0.col);if(typeof P0.showH=='boolean')showH=P0.showH;if(Array.isArray(P0.calSel))calSel=new Set(P0.calSel.slice(0,1));if(typeof P0.calLong=='boolean')calLong=P0.calLong;if(typeof P0.ce=='boolean')clickEdit=P0.ce}}catch(e){}
 let prefsReady=false,lastPrefs='';
-function savePrefs(){if(!prefsReady)return;try{const v=JSON.stringify({view,mode,theme,pf,mt,tf:[...tf],sf:[...sf],col:[...col],showH,calSel:[...calSel],calLong});if(v!==lastPrefs){lastPrefs=v;localStorage.setItem(PK,v)}}catch(e){}}
+function savePrefs(){if(!prefsReady)return;try{const v=JSON.stringify({view,mode,theme,pfs:[...pfs],mt,tf:[...tf],sf:[...sf],col:[...col],showH,calSel:[...calSel],calLong,ce:clickEdit});if(v!==lastPrefs){lastPrefs=v;localStorage.setItem(PK,v)}}catch(e){}}
 // ---- recurring occurrences ----
 const RI=t=>t&&t.repeat=='weekly'?'🔁':'📅';
 const ownOf=(x,t)=>(x&&x.owners)||[]; const eoF=(t,s)=>(s&&s.owners&&s.owners.length)?s.owners:((t&&t.owners)||[]);
@@ -454,14 +464,14 @@ const lc=(t,x,i,grp,h)=>{const bkey=i!=null?t.id+'::'+i:t.id;return`<div class="
  const lanes=V=>{const L=[],items=[];V.filter(([s])=>s.start).sort((a,b)=>a[0].start.localeCompare(b[0].start)).forEach(([s,i])=>{const a=(n(s.start)-ws)*p,w=(n(s.end)+1-n(s.start))*p,ex=Math.max(0,cv.measureText(s.title).width+24-w);let k=L.findIndex(e=>e<=a-56);if(k<0){k=L.length;L.push(0)}L[k]=a+w+ex+56;items.push([s,i,k])});return{items,n:Math.max(1,L.length)}};
  const key=t=>(t.subs&&t.subs.length?t.subs.map(s=>s.start).filter(Boolean).sort()[0]:t.start)||'9999';
  const P=orderedPeople();
- if(pf&&!P.includes(pf)&&(tasks.length||people.length))pf='';
+ if(pfs.size&&(tasks.length||people.length)){[...pfs].forEach(x=>{if(!P.includes(x))pfs.delete(x)})}
  if(mt&&tasks.length&&!tasks.some(t=>t.id==mt))mt='';
- const mine=a=>!pf||(a||[]).includes(pf);
+ const mine=pfOk;
  const tagOk=(a,b)=>!tf.size||(a||[]).some(x=>tf.has(x))||(b||[]).some(x=>tf.has(x));
  const qOk=ti=>!sq||String(ti||'').toLowerCase().includes(sq);
  const statusOk=x=>!sf.size||sf.has(st(x));
  let rows='';
- const personRows=()=>{(pf?[pf]:P).forEach(name=>{
+ const personRows=()=>{(pfs.size?P.filter(x=>pfs.has(x)):P).forEach(name=>{
   const it=[];
   sortT().forEach(t=>{
    if(t.hidden&&!showH)return;const S=t.subs||[],own=(t.owners||[]).includes(name);
@@ -481,7 +491,7 @@ const lc=(t,x,i,grp,h)=>{const bkey=i!=null?t.id+'::'+i:t.id;return`<div class="
    rows+=`<div class="row grp${hc}">${lc(t,t,null,1,h)}${tc(cp?ln.items.map(([s,i,k])=>bar(s,h,1,t.id,i,k)).join(''):'',cp?12+ln.n*28:0)}</div>`;
    if(!cp)fsOrder(V,S).forEach(([s,i])=>rows+=`<div class="row sub${hc||(s.hidden?' hid':'')}">${lc(t,s,i,undefined,h)}${tc(bar(s,h,1,t.id,i))}</div>`)}
   else if(mine(t.owners)&&tagOk(t.tags)&&qOk(t.title)&&statusOk(t))rows+=VIS.push(t.id)&&`<div class="row${hc}">${lc(t,t,undefined,undefined,h)}${tc(taskBars(t,h))}</div>`});
- if(!rows)rows=`<div class="emp">${tasks.length?(pf?'ไม่มีงานของ '+esc(pf):'ไม่มีงานที่แสดง'):'ยังไม่มีงาน กด “+ เพิ่มงาน” เพื่อเริ่มต้น'}</div>`;
+ if(!rows)rows=`<div class="emp">${tasks.length?(pfs.size?'ไม่มีงานของ '+esc([...pfs].join(', ')):'ไม่มีงานที่แสดง'):'ยังไม่มีงาน กด “+ เพิ่มงาน” เพื่อเริ่มต้น'}</div>`;
  const nx2=(nw-ws)*p,inRange=nw>=ws&&nw<we,line=inRange?`<div class="now${(jump&&(window.__pu=Date.now()+2500))||Date.now()<(window.__pu||0)?' pulse':''}" style="left:${lw+nx2}px"></div>`:'',pin=inRange&&view=='year'?`<div class="nowpin" style="left:${nx2}px">วันนี้</div>`:'';
  const leafAll=()=>{const out=[];sortT().forEach(t=>{if(mt&&t.id!=mt)return;if(t.hidden&&!showH)return;const h=colorOf(t),S=t.subs||[];
   if(S.length)S.forEach((x,i)=>{if((x.hidden&&!showH)||!mine(eoF(t,x))||!tagOk(t.tags,x.tags)||!(qOk(t.title)||qOk(x.title))||!statusOk(x))return;out.push({t,x,i,h})});
@@ -494,11 +504,11 @@ const lc=(t,x,i,grp,h)=>{const bkey=i!=null?t.id+'::'+i:t.id;return`<div class="
    else if(t.start&&mine(t.owners)&&tagOk(t.tags)&&qOk(t.title)&&statusOk(t)){const a=n(t.start),b=n(t.end);if(b<gs||a>=ge)return;it.push({t,x:t,i:null,h,a,b,lab:t.title})}});
   let it2=it,leg='';
   if(mode=='person'){const NA='ไม่ระบุ',cnt={};it2=[];
-   it.forEach(o=>{const ow=(o.i!=null?eoF(o.t,o.x):(o.x.owners||[]));const names=(ow.length?ow:[NA]).filter(nm=>!pf||nm==pf);if(!names.length)return;const inM=o.b>=f0&&o.a<f0+dim;names.forEach(nm=>{if(inM)cnt[nm]=(cnt[nm]||0)+1});if(calSel.size&&!names.some(nm=>calSel.has(nm)))return;it2.push({...o,persons:names,person:calSel.size||pf?(pf||[...calSel][0]):names[0]})});
-   const names=[...P.filter(x=>!pf||x==pf),...(cnt[NA]?[NA]:[])];
-   leg=`<div class="cleg"><span class="mut">ปฏิทินของ:</span><button type="button" data-cp="" class="${calSel.size?'':'on'}">ทั้งหมด</button>${names.map(nm=>{const pc=PCOLORS[nm]||'#9aa5a8',on=calSel.has(nm);return`<button type="button" data-cp="${esc(nm)}" class="${on?'on':''}" style="--pc:${pc};--pt:${textForHex(pc)}"><i></i>${esc(nm)} <small>${cnt[nm]||0}</small></button>`}).join('')}<span class="mut" style="margin-left:auto">${calSel.size||pf?'กดชื่อเดิมอีกครั้งหรือ “ทั้งหมด” เพื่อดูทุกคน':'กดชื่อเพื่อดูปฏิทินของคนนั้นคนเดียว'} · ตัวเลข = จำนวนงานในเดือนนี้</span></div>`}
+   it.forEach(o=>{const ow=(o.i!=null?eoF(o.t,o.x):(o.x.owners||[]));const names=(ow.length?ow:[NA]).filter(nm=>!pfs.size||pfs.has(nm));if(!names.length)return;const inM=o.b>=f0&&o.a<f0+dim;names.forEach(nm=>{if(inM)cnt[nm]=(cnt[nm]||0)+1});if(calSel.size&&!names.some(nm=>calSel.has(nm)))return;it2.push({...o,persons:names,person:pfs.size==1?[...pfs][0]:(calSel.size?[...calSel][0]:names[0])})});
+   const names=[...P.filter(x=>!pfs.size||pfs.has(x)),...(cnt[NA]?[NA]:[])];
+   leg=`<div class="cleg"><span class="mut">ปฏิทินของ:</span><button type="button" data-cp="" class="${calSel.size?'':'on'}">ทั้งหมด</button>${names.map(nm=>{const pc=PCOLORS[nm]||'#9aa5a8',on=calSel.has(nm);return`<button type="button" data-cp="${esc(nm)}" class="${on?'on':''}" style="--pc:${pc};--pt:${textForHex(pc)}"><i></i>${esc(nm)} <small>${cnt[nm]||0}</small></button>`}).join('')}<span class="mut" style="margin-left:auto">${calSel.size||pfs.size?'กดชื่อเดิมอีกครั้งหรือ “ทั้งหมด” เพื่อดูทุกคน':'กดชื่อเพื่อดูปฏิทินของคนนั้นคนเดียว'} · ตัวเลข = จำนวนงานในเดือนนี้</span></div>`}
   calItems=it2;
-  const chip=g=>{const o=g.o;let{bg,tx}=swatchColors(o.h,false,st(o.x)=='done'?0.55:1);const stt=st(o.x);const one=o.person&&(calSel.size==1||!!pf),cl=g.s>o.a,cr=g.e<o.b;return`<div class="cch cev ${stt}${cl?' cvl':''}${cr?' cvr':''}" data-id="${o.t.id}"${o.i!=null?` data-s="${o.i}"`:''}${o.key?` data-ok="${o.key}"`:''} title="${esc((o.sub?o.sub+' › ':'')+o.lab)} · ${fr(iso(o.a),iso(o.b))} · ${ST[stt]}${o.persons?' · ผู้รับผิดชอบ: '+esc(o.persons.join(', ')):''}" style="grid-column:${g.s-g.w0+1}/span ${g.e-g.s+1};grid-row:${g.k+2};background:${bg};color:${tx}">${cl?'<span class="lmk">◂</span>':''}${stt=='done'?'✓ ':''}${o.persons&&!one?`<span class="pdots">${o.persons.map(nm=>`<i style="background:${PCOLORS[nm]||'#9aa5a8'}"></i>`).join('')}</span>`:''}${esc(o.lab)}${cr?'<span class="lmk rt">▸</span>':''}</div>`};
+  const chip=g=>{const o=g.o;let{bg,tx}=swatchColors(o.h,false,st(o.x)=='done'?0.55:1);const stt=st(o.x);const one=o.person&&(calSel.size==1||pfs.size==1),cl=g.s>o.a,cr=g.e<o.b;return`<div class="cch cev ${stt}${cl?' cvl':''}${cr?' cvr':''}" data-id="${o.t.id}"${o.i!=null?` data-s="${o.i}"`:''}${o.key?` data-ok="${o.key}"`:''} title="${esc((o.sub?o.sub+' › ':'')+o.lab)} · ${fr(iso(o.a),iso(o.b))} · ${ST[stt]}${o.persons?' · ผู้รับผิดชอบ: '+esc(o.persons.join(', ')):''}" style="grid-column:${g.s-g.w0+1}/span ${g.e-g.s+1};grid-row:${g.k+2};background:${bg};color:${tx}">${cl?'<span class="lmk">◂</span>':''}${stt=='done'?'✓ ':''}${o.persons&&!one?`<span class="pdots">${o.persons.map(nm=>`<i style="background:${PCOLORS[nm]||'#9aa5a8'}"></i>`).join('')}</span>`:''}${esc(o.lab)}${cr?'<span class="lmk rt">▸</span>':''}</div>`};
   let cg='';const MX=4;for(let w=0;w<nW;w++){const w0=gs+w*7,w1=w0+7;
    const segs=it2.filter(o=>o.a<w1&&o.b>=w0).map(o=>({o,w0,s:Math.max(o.a,w0),e:Math.min(o.b,w1-1)})).sort((x,y)=>x.s-y.s||(y.e-y.s)-(x.e-x.s));
    const LN=[];segs.forEach(g=>{let k=LN.findIndex(z=>z<g.s);if(k<0){k=LN.length;LN.push(0)}LN[k]=g.e;g.k=k});
@@ -520,11 +530,11 @@ const lc=(t,x,i,grp,h)=>{const bkey=i!=null?t.id+'::'+i:t.id;return`<div class="
  {const caOn=$('#ca').style.display!='none',shOn=$('#sh').style.display!='none';$('#vwWrap').style.display=caOn||shOn?'':'none';$('#vwBtn').classList.toggle('act',showH)}$('#mgWrap').style.display=canW?'':'none';
  $('#fb').style.display='';
  $('#pfWrap').style.display=P.length?'':'none';
- {const nF=(pf?1:0)+tf.size+sf.size;$('#fltBtn').textContent='🔎 ตัวกรอง'+(nF?` (${nF})`:'')+' ▾';$('#fltBtn').classList.toggle('act',!!nF);$('#fltBtn').title=[pf&&'คน: '+pf,tf.size&&'แท็ก: '+[...tf].join(', '),sf.size&&'สถานะ: '+[...sf].map(k=>ST[k]).join(', ')].filter(Boolean).join(' · ')||'กรองตามชื่อคน แท็ก และสถานะ';$('#fltClr').style.display=nF?'':'none';$('#fltWrap').style.display=(P.length||tags.length||tasks.length)?'':'none'}
- $('#pfPop').innerHTML=[''].concat(P).map(x=>{const pc=x&&PCOLORS[x],sty=pc?(x==pf?`background:${pc};border-color:${pc};color:${textForHex(pc)};font-weight:600`:`border:2px solid ${pc};color:var(--fg)`):'';return`<button data-p="${esc(x)}" class="${x==pf?'on':''}"${sty?` style="${sty}"`:''}>${pc?`<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${pc};margin-right:5px;vertical-align:middle"></span>`:''}${x?esc(x):'ทั้งหมด'}</button>`}).join('');
+ {const nF=pfs.size+tf.size+sf.size;$('#fltBtn').textContent='🔎 ตัวกรอง'+(nF?` (${nF})`:'')+' ▾';$('#fltBtn').classList.toggle('act',!!nF);$('#fltBtn').title=[pfs.size&&'คน: '+[...pfs].join(', '),tf.size&&'แท็ก: '+[...tf].join(', '),sf.size&&'สถานะ: '+[...sf].map(k=>ST[k]).join(', ')].filter(Boolean).join(' · ')||'กรองตามชื่อคน แท็ก และสถานะ';$('#fltClr').style.display=nF?'':'none';$('#fltWrap').style.display=(P.length||tags.length||tasks.length)?'':'none'}
+ fltP=P;
  $('#tfWrap').style.display=tags.length?'':'none';
  
- $('#tfPop').innerHTML=tags.map(x=>`<button data-t="${esc(x)}" class="${tf.has(x)?'on':''}">${esc(x)}</button>`).join('')+'';
+ fltRender();fltChips();
  $('#sfWrap').style.display=tasks.length?'':'none';
  
  $('#sfPop').innerHTML=Object.keys(ST).map(k=>`<button data-st="${k}" class="${sf.has(k)?'on':''}" style="${sf.has(k)?`background:var(--s-${k});border-color:var(--s-${k});color:#fff`:`color:var(--s-${k});border-color:var(--s-${k})`}">${ST[k]}</button>`).join('')+'';
@@ -552,7 +562,7 @@ function dueTxt(o,stt){const d=effD(o);if(stt=='done'||!d.e)return'';const k=n(d
 function kanbanHTML(L){if(!L.length)return`<div class="emp">ไม่มีงานที่แสดง</div>`;
  const G0={};KBC.forEach(k=>G0[k]=[]);L.forEach(o=>{const k=st(o.x);(G0[k]||G0.ok).push(o)});
  const card=o=>{const x=o.x,stt=st(x),d=effD(o),drag=canW&&!(o.i==null&&isRep(x)),c=swatchColors(o.h,false);
-  return`<div class="kbd" draggable="${drag}" data-id="${o.t.id}"${o.i!=null?` data-s="${o.i}"`:''} style="border-left-color:${c.bg}" title="${drag?'ลากไปคอลัมน์อื่นเพื่อเปลี่ยนสถานะ · ':''}คลิกเพื่อดูรายละเอียด">${o.i!=null?`<small class="kbp">${esc(o.t.title)}</small>`:''}<b>${stt=='done'?'✓ ':''}${d.rep?RI(x)+' ':''}${esc(x.title)}</b><div class="kbm">${d.s?(d.rep?'รอบถัดไป ':'')+fr(d.s,d.e):'ยังไม่มีวันที่'} ${dueTxt(o,stt)}</div>${fsInfo(o.t,x)}${chips(x.owners)}${drag?`<select class="kbsel" data-kid="${o.t.id}" data-ks="${o.i!=null?o.i:''}" aria-label="เปลี่ยนสถานะ">${KBC.map(k=>`<option value="${k}"${k==stt?' selected':''}>${ST[k]}</option>`).join('')}</select>`:''}</div>`};
+  return`<div class="kbd" draggable="${drag}" data-id="${o.t.id}"${o.i!=null?` data-s="${o.i}"`:''} style="border-left-color:${c.bg}" title="${drag?'ลากไปคอลัมน์อื่นเพื่อเปลี่ยนสถานะ · ':''}${canW?(clickEdit?'คลิกเพื่อแก้ไข · Shift+คลิกเพื่อดูรายละเอียด':'คลิกเพื่อดูรายละเอียด · Shift+คลิกเพื่อแก้ไข'):'คลิกเพื่อดูรายละเอียด'}">${o.i!=null?`<small class="kbp">${esc(o.t.title)}</small>`:''}<b>${stt=='done'?'✓ ':''}${d.rep?RI(x)+' ':''}${esc(x.title)}</b><div class="kbm">${d.s?(d.rep?'รอบถัดไป ':'')+fr(d.s,d.e):'ยังไม่มีวันที่'} ${dueTxt(o,stt)}</div>${fsInfo(o.t,x)}${chips(x.owners)}${drag?`<select class="kbsel" data-kid="${o.t.id}" data-ks="${o.i!=null?o.i:''}" aria-label="เปลี่ยนสถานะ">${KBC.map(k=>`<option value="${k}"${k==stt?' selected':''}>${ST[k]}</option>`).join('')}</select>`:''}</div>`};
  return`<div class="kbw">${KBC.map(k=>{let A=G0[k].slice().sort((a,b)=>(effD(a).e||'9999').localeCompare(effD(b).e||'9999'));if(k=='done')A.reverse();const more=k=='done'&&!kbAll&&A.length>20;if(more)A=A.slice(0,20);
   return`<div class="kbc" data-kst="${k}"><div class="kbh" style="--sc:var(--s-${k})"><i></i>${ST[k]}<small>${G0[k].length}</small></div><div class="kbl">${A.map(card).join('')||'<p class="kbe">ไม่มีงาน</p>'}${more?`<button type="button" class="kbmore" data-kball="1">แสดงทั้งหมด (${G0[k].length})</button>`:''}</div></div>`}).join('')}</div><p class="kbhint">${canW?'ลากการ์ดไปวางคอลัมน์อื่นเพื่อเปลี่ยนสถานะ (มือถือใช้ช่องเลือกในการ์ด) · งานประจำเปลี่ยนสถานะด้วยการติ๊กรอบ':'ดูได้อย่างเดียว'}</p>`}
 async function kbMove(id,si,to){const t=tasks.find(x=>x.id==id);if(!t||!(to in ST))return;const isSub=si!==''&&si!=null,x=isSub?(t.subs||[])[+si]:t;if(!x)return;const from=st(x);if(from==to&&rawSt(x)==to)return render();
@@ -586,7 +596,7 @@ function dashHTML(L){if(!L.length)return`<div class="emp">ไม่มีงา�
 let permWarned=false;
 function handleWriteErr(e){
  if(e&&(e.code=='invalid_argument'||e.code=='permission-denied')&&db){
-  if(canW){canW=false;status='ดูได้อย่างเดียว';render()}
+  if(canW){canW=false;status='ดูได้อย่างเดียว';ceUI();render()}
   if(!permWarned){permWarned=true;toast('คุณไม่มีสิทธิ์แก้ไขข้อมูลนี้ (สิทธิ์เป็นแบบดูได้อย่างเดียว) รหัสผ่านทีมอาจไม่ถูกต้อง ลองรีเฟรชหน้าแล้วใส่รหัสใหม่')}
   return true}
  return false}
@@ -625,29 +635,32 @@ async function showLog(){
 // ---- FS (Finish-to-Start) dependencies between subtasks ----
 // ---- Task dependencies: FS / SS / FF / SF, across any main task or subtask ----
 const DT=['FS','SS','FF','SF'],DTN={FS:'เสร็จ → เริ่ม',SS:'เริ่ม → เริ่ม',FF:'เสร็จ → เสร็จ',SF:'เริ่ม → เสร็จ'};
-function depNorm(t,y){const d=y&&y.dep;if(!d||(!d.sid&&!d.tid))return null;const tid=d.tid||t.id;return{type:DT.includes(d.type)?d.type:'FS',tid,sid:d.sid||'',ref:d.sid?tid+':'+d.sid:tid,lag:parseInt(d.lag)||0}}
+function depsRaw(y){return y?(Array.isArray(y.deps)&&y.deps.length?y.deps:(y.dep?[y.dep]:[])):[]}
+function depNormAll(t,y){const out=[];depsRaw(y).forEach((d,ix)=>{if(!d||(!d.sid&&!d.tid))return;const tid=d.tid||t.id;out.push({type:DT.includes(d.type)?d.type:'FS',tid,sid:d.sid||'',ref:d.sid?tid+':'+d.sid:tid,lag:parseInt(d.lag)||0,ix})});return out}
+function depNorm(t,y){return depNormAll(t,y)[0]||null}
 function depIndex(T){const N=new Map(),S=new Map();T.forEach(t=>{const sb=t.subs||[];if(sb.length)sb.forEach((y,i)=>{const k=y.sid?t.id+':'+y.sid:t.id+'#'+i;N.set(k,{t,y,i,k})});else if(!isRep(t))N.set(t.id,{t,y:t,i:null,k:t.id})});
- N.forEach(nd=>{const d=depNorm(nd.t,nd.y);if(d&&N.has(d.ref)&&d.ref!==nd.k){if(!S.has(d.ref))S.set(d.ref,[]);S.get(d.ref).push(nd.k)}});return{N,S}}
+ N.forEach(nd=>{depNormAll(nd.t,nd.y).forEach(d=>{if(N.has(d.ref)&&d.ref!==nd.k){if(!S.has(d.ref))S.set(d.ref,[]);const a=S.get(d.ref);if(!a.includes(nd.k))a.push(nd.k)}})});return{N,S}}
 let DEPI=null;const depI=()=>DEPI||(DEPI=depIndex(tasks));
 const hasD=y=>!!(y&&y.start&&y.end);
 function depTarget(type,a,b,lag){const as=n(a.start),ae=n(a.end),len=Math.max(0,n(b.end)-n(b.start));if(type=='SS'){const x=as+lag;return[x,x+len]}if(type=='FF'){const e=ae+lag;return[e-len,e]}if(type=='SF'){const e=as-1+lag;return[e-len,e]}const x=ae+1+lag;return[x,x+len]}
 function depLagOf(type,a,b){if(type=='SS')return n(b.start)-n(a.start);if(type=='FF')return n(b.end)-n(a.end);if(type=='SF')return n(b.end)-n(a.start)+1;return n(b.start)-n(a.end)-1}
 function depPropagate(W,seeds){const{N,S}=depIndex(W),q=[...seeds],ch=new Set();let g=0;
- while(q.length&&g++<5000){const k=q.shift(),pn=N.get(k);if(!pn||!hasD(pn.y))continue;(S.get(k)||[]).forEach(sk=>{const sn=N.get(sk),d=depNorm(sn.t,sn.y);if(!d||!hasD(sn.y))return;const[a,e]=depTarget(d.type,pn.y,sn.y,d.lag);if(iso(a)!==sn.y.start||iso(e)!==sn.y.end){sn.y.start=iso(a);sn.y.end=iso(e);ch.add(sn.t.id);q.push(sk)}})}
+ while(q.length&&g++<5000){const k=q.shift(),pn=N.get(k);if(!pn||!hasD(pn.y))continue;(S.get(k)||[]).forEach(sk=>{const sn=N.get(sk);if(!sn||!hasD(sn.y))return;let best=null;depNormAll(sn.t,sn.y).forEach(d=>{const p=N.get(d.ref);if(!p||d.ref===sk||!hasD(p.y))return;const r=depTarget(d.type,p.y,sn.y,d.lag);if(!best||r[0]>best[0])best=r});if(!best)return;const[a,e]=best;if(iso(a)!==sn.y.start||iso(e)!==sn.y.end){sn.y.start=iso(a);sn.y.end=iso(e);ch.add(sn.t.id);q.push(sk)}})}
  return ch}
 const cloneT=T=>T.map(t=>({...t,subs:t.subs?t.subs.map(y=>({...y})):t.subs}));
 function nodeName(nd,fromTid){if(!nd)return'?';return nd.i==null?nd.t.title:(nd.t.id==fromTid?nd.y.title:nd.t.title+' › '+nd.y.title)}
 function depPhrase(type,nm){return type=='SS'?`เริ่มพร้อม “${nm}”`:type=='FF'?`เสร็จพร้อม “${nm}”`:type=='SF'?`เสร็จเมื่อ “${nm}” เริ่ม`:`เริ่มหลัง “${nm}” เสร็จ`}
-function depText(t,x){const d=depNorm(t,x);if(!d)return'';const p=depI().N.get(d.ref);if(!p)return'';return d.type+' · '+depPhrase(d.type,nodeName(p,t.id))+(d.lag?` (${d.lag>0?'+':''}${d.lag} วัน)`:'')}
+function depTexts(t,x){return depNormAll(t,x).map(d=>{const p=depI().N.get(d.ref);if(!p)return'';return d.type+' · '+depPhrase(d.type,nodeName(p,t.id))+(d.lag?` (${d.lag>0?'+':''}${d.lag} วัน)`:'')}).filter(Boolean)}
+function depText(t,x){return depTexts(t,x).join(' ; ')}
 function depDescFor(tid,dep,L){if(!dep)return'';const type=DT.includes(dep.type)?dep.type:'FS',lag=parseInt(dep.lag)||0;let nm='?';
  if(!dep.tid){const z=(L||[]).find(y=>y.sid==dep.sid);if(z)nm=z.title}else{const nd=depI().N.get(dep.sid?dep.tid+':'+dep.sid:dep.tid);if(nd)nm=nodeName(nd,tid)}
  return type+' · '+depPhrase(type,nm)+(lag?` (${lag>0?'+':''}${lag} วัน)`:'')}
 function fsTxt(tid,x){const t=tasks.find(y=>y.id==tid);return t?depText(t,x):''}
-function fsOrder(V,S){const out=[],put=new Set(),inV=new Set(V.map(v=>v[1]));const place=(v,g)=>{if(put.has(v[1])||g>60)return;const y=v[0];if(y.dep&&!y.dep.tid&&y.dep.sid){const j=S.findIndex(q=>q.sid&&q.sid==y.dep.sid);if(j>=0&&inV.has(j)&&!put.has(j)){const pv=V.find(w=>w[1]==j);put.add(v[1]);place(pv,g+1);put.delete(v[1])}}if(!put.has(v[1])){put.add(v[1]);out.push(v)}};V.forEach(v=>place(v,0));return out}
-function fsInfo(t,x){const tx=depText(t,x);if(!tx)return'';const d=depNorm(t,x);return`<span class="dt fsdt" title="เชื่อมโยงงานแบบ ${d.type} (${esc(DTN[d.type])}) — ถ้างานต้นทางเลื่อน งานนี้จะเลื่อนตามอัตโนมัติ">🔗 ${esc(tx)}</span>`}
-function depSuccText(t,x,i){const k=i==null?t.id:(x.sid?t.id+':'+x.sid:'');if(!k)return'';const L=depI().S.get(k)||[];return L.map(sk=>{const nd=depI().N.get(sk),d=depNorm(nd.t,nd.y);return`${d.type} · ${esc(nodeName(nd,t.id))}`}).join('<br>')}
+function fsOrder(V,S){const out=[],put=new Set(),inV=new Set(V.map(v=>v[1]));const place=(v,g)=>{if(put.has(v[1])||g>60)return;const y=v[0];depsRaw(y).forEach(d=>{if(d&&!d.tid&&d.sid){const j=S.findIndex(q=>q.sid&&q.sid==d.sid);if(j>=0&&inV.has(j)&&!put.has(j)){const pv=V.find(w=>w[1]==j);put.add(v[1]);place(pv,g+1);put.delete(v[1])}}});if(!put.has(v[1])){put.add(v[1]);out.push(v)}};V.forEach(v=>place(v,0));return out}
+function fsInfo(t,x){return depNormAll(t,x).map(d=>{const p=depI().N.get(d.ref);if(!p)return'';const tx=d.type+' · '+depPhrase(d.type,nodeName(p,t.id))+(d.lag?` (${d.lag>0?'+':''}${d.lag} วัน)`:'');return`<span class="dt fsdt" title="เชื่อมโยงงานแบบ ${d.type} (${esc(DTN[d.type])}) — ถ้างานต้นทางเลื่อน งานนี้จะเลื่อนตามอัตโนมัติ">🔗 ${esc(tx)}</span>`}).filter(Boolean).join('<br>')}
+function depSuccText(t,x,i){const k=i==null?t.id:(x.sid?t.id+':'+x.sid:'');if(!k)return'';const L=depI().S.get(k)||[];return L.map(sk=>{const nd=depI().N.get(sk),d=depNormAll(nd.t,nd.y).find(z=>z.ref===k)||{type:'FS'};return`${d.type} · ${esc(nodeName(nd,t.id))}`}).join('<br>')}
 async function depWrite(W,ids,skipKey){let moved=0;for(const tid of ids){const nt=W.find(x=>x.id==tid),ot=tasks.find(x=>x.id==tid);if(!nt||!ot)continue;
-  const data=(nt.subs&&nt.subs.length)?{subs:nt.subs}:{start:nt.start,end:nt.end,...(nt.dep?{dep:nt.dep}:{})};
+  const data=(nt.subs&&nt.subs.length)?{subs:nt.subs}:{start:nt.start,end:nt.end,...(nt.dep?{dep:nt.dep}:{}),...(nt.deps?{deps:nt.deps}:{})};
   const pairs=(nt.subs&&nt.subs.length)?nt.subs.map((y,k)=>[y,(ot.subs||[])[k],y.sid?tid+':'+y.sid:tid+'#'+k]):[[nt,ot,tid]];
   pairs.forEach(([y,o,k])=>{if(!o||k===skipKey||(o.start==y.start&&o.end==y.end))return;moved++;logAct('เลื่อนวันที่',(nt.subs&&nt.subs.length)?y.title+' ('+nt.title+')':nt.title,fr(o.start,o.end)+' → '+fr(y.start,y.end)+' · เลื่อนตามการเชื่อมโยงงาน',tid)});
   try{if(db)await db.doc('tasks/'+tid).update(data);else tasks=tasks.map(x=>x.id==tid?{...x,...data}:x)}catch(e){if(!handleWriteErr(e))toast('บันทึกไม่สำเร็จ: '+(e.code||e.message||e))}}
@@ -662,7 +675,7 @@ function fsPath(P,r){let d=`M${P[0][0]} ${P[0][1]}`;for(let k=1;k<P.length;k++){
   const ax=x-(x-px)/(l1||1)*rr,ay=y-(y-py)/(l1||1)*rr,bx2=x+(nx-x)/(l2||1)*rr,by2=y+(ny-y)/(l2||1)*rr;d+=`L${ax} ${ay}Q${x} ${y} ${bx2} ${by2}`}else d+=`L${x} ${y}`}return d}
 function drawDeps(){const inner=document.querySelector('#sc .inner');if(!inner)return;let sv=inner.querySelector('svg.fsl');const ir=inner.getBoundingClientRect();let P='';const{N}=depI();
  const barOf=nd=>nd.i==null?inner.querySelector(`.bar[data-id="${CSS.escape(nd.t.id)}"]:not([data-s]):not([data-virt])`):inner.querySelector(`.bar[data-id="${CSS.escape(nd.t.id)}"][data-s="${nd.i}"]`);
- N.forEach(nd=>{const dn=depNorm(nd.t,nd.y);if(!dn)return;const pn=N.get(dn.ref);if(!pn)return;const A=barOf(pn),B=barOf(nd);if(!A||!B)return;
+ N.forEach(nd=>{depNormAll(nd.t,nd.y).forEach(dn=>{const pn=N.get(dn.ref);if(!pn)return;const A=barOf(pn),B=barOf(nd);if(!A||!B)return;
   const a=A.getBoundingClientRect(),b=B.getBoundingClientRect(),y1=a.top+a.height/2-ir.top,y2=b.top+b.height/2-ir.top,exE=dn.type=='FS'||dn.type=='FF',inS=dn.type=='FS'||dn.type=='SS';
   let ax,dirE;if(exE){const ae=A.querySelector('.dl:not(.a):not(.upr)'),aer=ae&&ae.getBoundingClientRect(),atb=A.querySelector('b'),atr=atb&&atb.getBoundingClientRect(),x1=a.right-ir.left;ax=Math.max(aer&&aer.width?aer.right-ir.left:x1,atr&&atr.width&&!(aer&&aer.width)?atr.left+measTitle(atb.textContent)+2-ir.left:x1)+4;dirE=1}
   else{const as=A.querySelector('.dl.a:not(.up)'),asr=as&&as.getBoundingClientRect();ax=(asr&&asr.width?asr.left:a.left)-ir.left-4;dirE=-1}
@@ -671,7 +684,7 @@ function drawDeps(){const inner=document.querySelector('#sc .inner');if(!inner)r
   let pts;if(ovf){const xe=b.right-ir.left-6,yb=b.bottom-ir.top+9;pts=(xe-ax)*dirE>=4&&a.top>b.bottom?[[ax,y1],[xe,y1],[xe,b.bottom-ir.top+1]]:[[ax,y1],[xo,y1],[xo,yb],[xe,yb],[xe,b.bottom-ir.top+1]]}
   else pts=(xi-ax)*dirE>=4?[[ax,y1],[xi,y1],[xi,y2],[bx,y2]]:[[ax,y1],[xo,y1],[xo,ym],[xi,ym],[xi,y2],[bx,y2]];
   const d=fsPath(pts,8);
-  P+=`<path d="${d}"/>`});
+  P+=`<path d="${d}"/>`})});
  if(!P){if(sv)sv.remove();return}
  if(!sv){sv=document.createElementNS('http://www.w3.org/2000/svg','svg');sv.setAttribute('class','fsl');inner.appendChild(sv)}
  sv.setAttribute('width',inner.scrollWidth);sv.setAttribute('height',inner.scrollHeight);
@@ -689,7 +702,7 @@ function fieldDiff(o,n,isSub,L){const ch=[],A=x=>x||[];
  const sd2=(a,b,l)=>{const ad=A(b).filter(x=>!A(a).includes(x)),rm=A(a).filter(x=>!A(b).includes(x));if(ad.length||rm.length)ch.push(l+': '+[...ad.map(x=>'+'+x),...rm.map(x=>'−'+x)].join(' '))};
  sd2(o.owners,n.owners,'ผู้รับผิดชอบ');sd2(o.tags,n.tags,'แท็ก');
  if((o.notes||'')!==(n.notes||''))ch.push(n.notes?(o.notes?'แก้โน้ต: “'+String(n.notes).slice(0,60)+'”':'เพิ่มโน้ต: “'+String(n.notes).slice(0,60)+'”'):'ลบโน้ต');
- {const dj=x=>x&&x.dep?JSON.stringify([x.dep.type||'FS',x.dep.tid||'',x.dep.sid||'',parseInt(x.dep.lag)||0]):'';if(dj(o)!==dj(n))ch.push(n.dep?'เชื่อมโยง: '+depDescFor(n.dep.tid?'':'',n.dep,L||n.subs):'เลิกเชื่อมโยงงาน')}
+ {const dj=x=>JSON.stringify(depsRaw(x).map(d=>[d.type||'FS',d.tid||'',d.sid||'',parseInt(d.lag)||0]));if(dj(o)!==dj(n)){const dl=depsRaw(n);ch.push(dl.length?'เชื่อมโยง: '+dl.map(d=>depDescFor(d.tid?'':'',d,L||n.subs)).join(' + '):'เลิกเชื่อมโยงงาน')}}
  if(!isSub){if(String(o.color??'')!==String(n.color??''))ch.push('เปลี่ยนสีแถบ');
   if((o.repeat||'none')!==(n.repeat||'none'))ch.push('ทำซ้ำ: '+RLBL(o)+' → '+RLBL(n));
   if((o.repeatUntil||'')!==(n.repeatUntil||''))ch.push('ทำซ้ำถึง: '+(o.repeatUntil?dd(o.repeatUntil):'ไม่กำหนด')+' → '+(n.repeatUntil?dd(n.repeatUntil):'ไม่กำหนด'));
@@ -775,7 +788,7 @@ function reorderUI(){
   if(ch.length)logAct('จัดลำดับงานหลัก',ch.length+' รายการ');m.remove()}}
 function calDay(d){const L=calItems.filter(o=>o.a<=d&&d<=o.b);
  const m=modal(`<h2>${dd(iso(d))} <small>· ${L.length} รายการ</small></h2>${L.map(o=>`<button type="button" class="owi" data-oi="${esc(o.t.id)}"${o.key?` data-ok="${o.key}"`:''}${o.i!=null?` data-os="${o.i}"`:''} style="border-left-color:${swatchColors(o.h,false).bg}">${o.sub?`<small>${esc(o.sub)} ›</small>`:''}<b>${esc(o.lab)}</b><small>${fr(iso(o.a),iso(o.b))} · ${ST[st(o.x)]}</small>${chips(ownOf(o.x,o.t))}</button>`).join('')}<div class="ft"><span class="sp"></span><button class="ghost" id="cx">ปิด</button></div>`);
- m.querySelector('.md').addEventListener('click',e=>{const b=e.target.closest('[data-oi]');if(b){m.remove();b.dataset.ok?occInfo(b.dataset.oi,b.dataset.ok):info(b.dataset.oi,b.dataset.os)}})}
+ m.querySelector('.md').addEventListener('click',e=>{const b=e.target.closest('[data-oi]');if(b){m.remove();b.dataset.ok?occInfo(b.dataset.oi,b.dataset.ok):openT(b.dataset.oi,b.dataset.os,e)}})}
 const OWK='teamboard.owSkip';
 function owSkipped(){try{return localStorage.getItem(OWK)===iso(Math.floor(now()))}catch(e){return false}}
 function owAddSkip(){const md=[...document.querySelectorAll('.ov .md')].pop();if(!md)return;const ft=md.querySelector('.ft');const l=document.createElement('label');l.className='owskip';l.innerHTML='<input type="checkbox" id="owSk"> วันนี้ไม่ต้องแสดงหน้านี้อัตโนมัติอีก (เปิดดูเองได้จากปุ่ม ⏳ On Working)';(ft?md.insertBefore(l,ft):md.appendChild(l));
@@ -802,7 +815,7 @@ function onWorking(){
  soon.sort((a,b)=>a.d-b.d);
  const soonH=soon.length?`<div class="owg owsoon"><h3 style="color:var(--s-none)">⏰ ครบกำหนดภายใน 7 วัน <i>${soon.length}</i></h3>${soon.map(o=>`<button type="button" class="owi" data-oi="${esc(o.t.id)}"${o.x._key?` data-ok="${o.x._key}"`:''}${o.i!=null?` data-os="${o.i}"`:''} style="border-left-color:${swatchColors(colorOf(o.t),false).bg}">${o.s?`<small>${esc(o.t.title)} ›</small><b>${esc(o.s.title)}</b>`:`<b>${esc(o.t.title)}</b>`}<small class="dl2">${o.d==0?'ครบกำหนดวันนี้':'อีก '+o.d+' วัน'} · ${dd(o.x.end)}</small>${chips(ownOf(o.x,o.t))}</button>`).join('')}</div>`:'';
  const m=modal(`<h2>⏳ On Working <small>· ${dd(iso(td))}</small></h2><p class="hint">งานที่ช่วงเวลาครอบคลุมวันนี้ (ตามเส้นเวลาปัจจุบัน) รวม ${items.length} งาน + เลยกำหนด ${late.length} งาน แบ่งตามสถานะ และงานที่ใกล้ครบกำหนด กดที่งานเพื่อดูรายละเอียด</p>${lateH}${soonH}${body}${!items.length&&!soon.length&&!late.length?'<p class="mut">วันนี้ไม่มีงานที่อยู่ในช่วงเวลา</p>':''}<div class="ft"><span class="sp"></span><button class="ghost" id="cx">ปิด</button></div>`);
- m.querySelector('.md').addEventListener('click',e=>{const b=e.target.closest('[data-oi]');if(b){m.remove();b.dataset.ok?occInfo(b.dataset.oi,b.dataset.ok):info(b.dataset.oi,b.dataset.os)}})}
+ m.querySelector('.md').addEventListener('click',e=>{const b=e.target.closest('[data-oi]');if(b){m.remove();b.dataset.ok?occInfo(b.dataset.oi,b.dataset.ok):openT(b.dataset.oi,b.dataset.os,e)}})}
 function hide(id,si){const t=tasks.find(x=>x.id==id);if(!t)return;
  if(si!=null&&si!==''){const x=t.subs[+si];if(x)logAct(x.hidden?'เลิกซ่อนงานย่อย':'ซ่อนงานย่อย',x.title+' ('+t.title+')','',id);patchSub(id,+si,y=>({...y,hidden:!y.hidden}))}else{logAct(t.hidden?'เลิกซ่อนงาน':'ซ่อนงาน',t.title,'',id);patch(id,{hidden:!t.hidden})}}
 function pick(sel,roster,empty){const el=document.createElement('div');el.className='pk';const S=new Set(sel);
@@ -821,6 +834,50 @@ function roster(title,hint,list,save,kind,colorable){
 function team(){roster('รายชื่อทีม','เพิ่มชื่อที่นี่ครั้งเดียว แล้วกดเลือกตอนมอบหมายงาน ชื่อจะตรงกันทุกครั้ง และใช้กรองดูงานรายบุคคลได้ กดช่องสีหลังชื่อเพื่อตั้งสีประจำตัว',()=>people,savePeople,'ชื่อผู้รับผิดชอบ',true)}
 function tagsUI(){roster('แท็ก','เพิ่มแท็กที่นี่ แล้วกดเลือกตอนสร้าง/แก้งานหลัก ใช้กรองปฏิทินตามแท็กได้',()=>tags,saveTags,'แท็ก')}
 
+// ---- Undo / Redo: บันทึกสถานะก่อนเขียนของ tasks/trash แล้วกู้คืน เขียนต่อกันภายใน 1.2 วินาทีจับเป็นขั้นเดียว ----
+let rawDb=null,undoSt=[],redoSt=[],undoCur=null,undoTm=null,undoBusy=false,undoApplying=false;const uLast={},UTRK={tasks:1,trash:1};
+const uClone=v=>v==null?null:JSON.parse(JSON.stringify(v)),uKey=(c,i)=>c+'/'+i;
+function uState(c,id){const lk=uLast[uKey(c,id)];if(lk&&Date.now()-lk.t<4000)return uClone(lk.v);const x=(c=='tasks'?tasks:trashItems).find(t=>t.id==id);if(!x)return null;const{id:_i,...r}=x;return uClone(r)}
+function uSet(c,id,v){uLast[uKey(c,id)]={t:Date.now(),v:uClone(v)}}
+function uRec(c,id,op,args){if(undoApplying)return;const k=uKey(c,id),b=uState(c,id);
+ if(!undoCur)undoCur={items:new Map(),label:''};
+ if(!undoCur.items.has(k))undoCur.items.set(k,{c,id,before:b});
+ const a=op=='delete'?null:op=='set'?args[0]:{...(b||{}),...args[0]};uSet(c,id,a);
+ if(!undoCur.label&&c=='tasks'){const t=(a&&a.title)||(b&&b.title);if(t)undoCur.label=t}
+ redoSt.length=0;clearTimeout(undoTm);undoTm=setTimeout(uCommit,1200);uUI()}
+function uCommit(){clearTimeout(undoTm);undoTm=null;if(undoCur&&undoCur.items.size){undoSt.push(undoCur);if(undoSt.length>50)undoSt.shift()}undoCur=null;uUI()}
+function uUI(){const g=$('#ugrp');if(!g)return;g.style.display=(rawDb&&canW)?'inline-flex':'none';const u=$('#undoBtn'),r=$('#redoBtn'),tp=undoCur||undoSt[undoSt.length-1],rt=redoSt[redoSt.length-1];u.disabled=!tp;r.disabled=!rt;u.title='ย้อนกลับ (Ctrl+Z)'+(tp&&tp.label?' : '+tp.label:'');r.title='ทำซ้ำ (Ctrl+Shift+Z)'+(rt&&rt.label?' : '+rt.label:'')}
+async function uApply(b){const inv=[];undoApplying=true;try{
+ for(const it of b.items.values())inv.push({c:it.c,id:it.id,before:uState(it.c,it.id)});
+ for(const it of b.items.values()){const r=rawDb.doc(it.c+'/'+it.id);if(it.before===null)await r.delete();else await r.set(uClone(it.before));uSet(it.c,it.id,it.before)}
+ }finally{undoApplying=false}
+ return{items:new Map(inv.map(x=>[uKey(x.c,x.id),x])),label:b.label}}
+async function uRun(dir){if(undoBusy||!rawDb||!canW)return;uCommit();const from=dir<0?undoSt:redoSt,to=dir<0?redoSt:undoSt;
+ if(!from.length){toast(dir<0?'ไม่มีอะไรให้ย้อนกลับ':'ไม่มีอะไรให้ทำซ้ำ');return}
+ const b=from.pop();undoBusy=true;try{const inv=await uApply(b),nt=[...b.items.values()].filter(x=>x.c=='tasks').length;to.push(inv);
+  toast((dir<0?'↩ ย้อนกลับแล้ว: ':'↪ ทำซ้ำแล้ว: ')+(b.label||'งาน')+(nt>1?' (+'+(nt-1)+' งาน)':''));logAct(dir<0?'ย้อนกลับ':'ทำซ้ำ',b.label||'',nt+' งาน')}
+ catch(e){from.push(b);if(!handleWriteErr(e))toast('ย้อนกลับไม่สำเร็จ: '+(e.code||e.message||e))}finally{undoBusy=false;uUI()}}
+function wrapDb(d){const refW=(ref,c,i0)=>new Proxy({},{get(_p,k){const t=ref;const v=t[k];if(typeof v!='function')return v;if(k=='set'||k=='update'||k=='delete')return(...a)=>{const id=i0||t.id;if(id)uRec(c,id,k,a);return v.apply(t,a)};return v.bind(t)}}),
+ colW=(col,c)=>new Proxy({},{get(_p,k){const t=col;const v=t[k];if(typeof v!='function')return v;if(k=='doc')return(...a)=>refW(t.doc(...a),c,a[0]);return v.bind(t)}});
+ return new Proxy({},{get(_p,k){const t=d;const v=t[k];if(typeof v!='function')return v;if(k=='doc')return p=>{const s=String(p).split('/');return UTRK[s[0]]?refW(t.doc(p),s[0],s[1]):t.doc(p)};if(k=='collection')return nm=>UTRK[nm]?colW(t.collection(nm),nm):t.collection(nm);return v.bind(t)}})}
+function ceUI(){const b=$('#ceBtn');if(!b)return;b.style.display=canW?'':'none';b.classList.toggle('on',clickEdit);b.setAttribute('aria-pressed',clickEdit);b.title=clickEdit?'คลิกที่งานเพื่อแก้ไขทันที: เปิดอยู่ (กดเพื่อปิด แล้วคลิกจะเปิดดูรายละเอียดแทน)':'คลิกที่งานเพื่อแก้ไขทันที: ปิดอยู่ (กดเพื่อเปิด)'}
+$('#ceBtn').onclick=()=>{clickEdit=!clickEdit;ceUI();savePrefs();render();toast(clickEdit?'✏️ เปิด: คลิกที่งานเพื่อแก้ไขทันที':'✏️ ปิด: คลิกที่งานเพื่อดูรายละเอียด (Shift+คลิกเพื่อแก้ไข)')};
+$('#undoBtn').onclick=()=>uRun(-1);$('#redoBtn').onclick=()=>uRun(1);
+document.addEventListener('keydown',e=>{if(!(e.ctrlKey||e.metaKey)||e.altKey)return;const k=(e.key||'').toLowerCase();if(k!='z'&&k!='y')return;const tg=e.target;if(tg&&tg.closest&&tg.closest('input,textarea,select,[contenteditable="true"]'))return;if(document.querySelector('.ov'))return;e.preventDefault();uRun(k=='y'||e.shiftKey?1:-1)});
+function fltRender(){
+ const fa=document.activeElement,fk=fa&&fa.dataset&&fa.dataset.fk?fa.dataset.fk+'|'+fa.dataset.v:'';
+ const one=(k,items,set,col)=>{const qs=fxQ[k].trim().toLowerCase(),L=items.filter(x=>!qs||x.toLowerCase().includes(qs)),el=$(k=='p'?'#pfPop':'#tfPop'),sc0=el.scrollTop;
+  el.innerHTML=L.length?L.map(x=>`<label class="fxi"><input type="checkbox" data-fk="${k}" data-v="${esc(x)}"${set.has(x)?' checked':''}>${col&&PCOLORS[x]?`<span class="dot" style="background:${PCOLORS[x]}"></span>`:''}<span>${esc(x)}</span></label>`).join(''):`<div class="fxe">ไม่พบ${k=='p'?'ชื่อ':'แท็ก'}ที่ตรงกับ “${esc(fxQ[k].trim())}”</div>`;el.scrollTop=sc0;
+  const w=el.closest('.fx'),hd=w.querySelector('.fxh');hd.classList.toggle('act',set.size>0);
+  hd.querySelector('.fxs').textContent=set.size?(set.size<=2?[...set].join(', '):set.size+(k=='p'?' คน':' รายการ')):(k=='p'?'ทุกคน':'ทั้งหมด');
+  w.classList.toggle('open',!!fxOpen[k]);hd.setAttribute('aria-expanded',!!fxOpen[k]);
+  w.querySelector('.fxc').style.visibility=set.size?'':'hidden';w.querySelector('.fxq').style.display=items.length>6?'':'none'};
+ one('p',fltP,pfs,true);one('t',tags,tf,false);
+ if(fk){const el=[...document.querySelectorAll('#fltPop input[data-fk]')].find(x=>x.dataset.fk+'|'+x.dataset.v==fk);if(el)el.focus()}}
+function fltChips(){const c=$('#fchips');if(!c)return;const ch=[];
+ [...pfs].forEach(x=>ch.push(['p',x,'👤 '+x,PCOLORS[x]]));[...tf].forEach(x=>ch.push(['t',x,'🏷️ '+x]));[...sf].forEach(k=>ch.push(['s',k,'📌 '+ST[k]]));
+ if(!ch.length){c.style.display='none';c.innerHTML='';return}
+ c.style.display='';c.innerHTML='<span class="mut">กำลังกรอง:</span>'+ch.map(([k,v,l,col])=>`<button type="button" class="fchip" data-chip="${k}" data-v="${esc(v)}" title="เอาตัวกรองนี้ออก"${col?` style="border-color:${col}"`:''}>${esc(l)} <b>✕</b></button>`).join('')+(ch.length>1?'<button type="button" class="fchip fcall" data-chip="all">ล้างทั้งหมด</button>':'')}
 function toast(msg){
  let tw=document.getElementById('tw');
  if(!tw){tw=document.createElement('div');tw.id='tw';tw.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:50;display:flex;flex-direction:column;gap:6px;align-items:center;pointer-events:none';document.body.appendChild(tw)}
@@ -836,6 +893,7 @@ function askConfirm(msg){
   m.onclick=e=>{if(e.target==m)fin(false)}})}
 function modal(h){const m=document.createElement('div');m.className='ov';m.innerHTML=`<div class="md" role="dialog">${h}</div>`;document.body.appendChild(m);m.onclick=e=>{if(e.target==m||e.target.id=='cx')m.remove()};return m}
 
+function openT(id,si,e){const mod=!!(e&&(e.shiftKey||e.altKey||e.ctrlKey||e.metaKey));if(canW&&clickEdit!==mod)edit(id,si!=null&&si!==''?+si:null,true);else info(id,si)}
 function info(id,si){const t=tasks.find(x=>x.id==id);if(!t)return;
  const s=si!=null&&si!==''?(t.subs||[])[si]:null,x=s||t,S=t.subs||[];
  let h=`<h2>${s?`<small>${esc(t.title)} ›</small><br>`:''}${esc(x.title)}</h2>`;
@@ -855,7 +913,7 @@ function info(id,si){const t=tasks.find(x=>x.id==id);if(!t)return;
  const im=modal(h+'<div class="ft"><span class="sp"></span><button class="ghost" id="cx">ปิด</button></div>');im.querySelector('.md').addEventListener('click',e=>{const b=e.target.closest('[data-okk]');if(b){im.remove();occInfo(id,b.dataset.okk)}})}
 
 const canon=v=>JSON.stringify(v,(k,x)=>x&&typeof x=='object'&&!Array.isArray(x)?Object.keys(x).sort().reduce((o,k2)=>(o[k2]=x[k2],o),{}):x);
-function edit(id){
+function edit(id,focusSub,fx){
  const d0=Math.floor(now()),t=tasks.find(x=>x.id==id)||{title:'',owners:[],tags:[],subs:[]},snap0=id?canon(t):null;
  let ms=t.status||'ok',mc=t.color!=null?t.color:null,tent=!!(t.start&&ms=='none'),rp=t.repeat||'none',fsVal=t.start||iso(d0),feVal=t.end||iso(d0+6);
  const m=modal(`<h2>${id?'แก้ไขงาน':'เพิ่มงานใหม่'}</h2>
@@ -876,9 +934,9 @@ function edit(id){
  <details class="dephelp"><summary>ℹ️ วิธีใช้การเชื่อมโยงงาน (FS / SS / FF / SF)</summary>
  <p>เลือก “🔗 เชื่อมกับงานไหน” ที่งานย่อย (หรือที่งานหลักที่ไม่มีงานย่อย) แล้วเลือกประเภท เชื่อมได้กับงานย่อยในงานนี้ งานย่อยของงานหลักอื่น หรืองานหลักที่ไม่มีงานย่อย</p>
  <ul><li><b>FS เสร็จ → เริ่ม</b>: งานนี้เริ่มหลังงานที่เลือกเสร็จ (ใช้บ่อยที่สุด)</li><li><b>SS เริ่ม → เริ่ม</b>: งานนี้เริ่มพร้อมงานที่เลือก</li><li><b>FF เสร็จ → เสร็จ</b>: งานนี้เสร็จพร้อมงานที่เลือก</li><li><b>SF เริ่ม → เสร็จ</b>: งานนี้เสร็จเมื่องานที่เลือกเริ่ม (เช่น สัญญาเดิมสิ้นสุดเมื่อสัญญาใหม่เริ่ม)</li></ul>
- <p><b>เว้น x วัน</b> = ระยะห่างจากจุดที่เชื่อม ใส่ค่าติดลบได้ ถ้างานต้นทางเลื่อน งานนี้ (และงานที่ต่อกันทั้งสาย) จะเลื่อนตามอัตโนมัติ ถ้าลากหรือแก้วันที่งานนี้เอง ระบบจะปรับจำนวนวันที่เว้นให้ตามตำแหน่งใหม่ งานหนึ่งเชื่อมกับงานต้นทางได้ 1 งาน แต่งานต้นทางหนึ่งงานมีงานที่ตามได้หลายงาน</p></details>
+ <p><b>เว้น x วัน</b> = ระยะห่างจากจุดที่เชื่อม ใส่ค่าติดลบได้ ถ้างานต้นทางเลื่อน งานนี้ (และงานที่ต่อกันทั้งสาย) จะเลื่อนตามอัตโนมัติ ถ้าลากหรือแก้วันที่งานนี้เอง ระบบจะปรับจำนวนวันที่เว้นให้ตามตำแหน่งใหม่ กด “+ เชื่อมเพิ่ม” เพื่อให้งานนี้รอได้หลายงาน (เช่น รอทั้งเอกสารและอนุมัติ) ระบบจะวางงานนี้ตามงานต้นทางที่ช้าที่สุด และงานต้นทางหนึ่งงานมีงานที่ตามได้หลายงาน</p></details>
  <div id="subs"></div><button type="button" class="ghost" id="as">+ เพิ่มงานย่อย</button>
- <div class="ft">${id?'<button class="danger" id="dl">ลบงาน</button>':''}<span class="sp"></span><button class="ghost" id="cx">ปิด</button><button class="pri" id="sv">บันทึก</button></div>`);
+ <div class="ft">${id?'<button class="danger" id="dl">ลบงาน</button>':''}<span class="sp"></span><button class="ghost" id="fxall" style="display:none">✏️ แก้ไขทั้งงาน</button><button class="ghost" id="cx">ปิด</button><button class="pri" id="sv">บันทึก</button></div>`);
  const q=s=>m.querySelector(s),sy=()=>{const h=q('#subs').children.length,showDt=!h&&!(ms=='none'&&!tent);q('#dt').style.display=showDt?'':'none';q('#mdepw').style.display=showDt&&rp=='none'?'':'none';if(showDt){q('#fs').value=fsVal;q('#fe').value=feVal}q('#stw').style.display=h?'none':'';q('#tentWrap').style.display=(!h&&ms=='none')?'':'none';q('#rpWrap').style.display=(h||(ms=='none'&&!tent))?'none':''};
  q('#fs').oninput=e=>{fsVal=e.target.value};
  q('#fe').oninput=e=>{feVal=e.target.value};
@@ -895,10 +953,10 @@ function edit(id){
  const addSub=s=>{const r=document.createElement('div');r.className='sr';
   const none0=(s.status||'ok')=='none';
   r.innerHTML=`<div class="srR1"><button type="button" class="ghost sm" data-mv="-1" title="เลื่อนขึ้น" aria-label="เลื่อนขึ้น">↑</button><button type="button" class="ghost sm" data-mv="1" title="เลื่อนลง" aria-label="เลื่อนลง">↓</button><input class="t" placeholder="ชื่องานย่อย" value="${esc(s.title)}"><select class="ss" title="สถานะ">${Object.keys(ST).map(k=>`<option value="${k}"${k==(s.status||'ok')?' selected':''}>${ST[k]}</option>`).join('')}</select><button type="button" class="del sm" data-del aria-label="ลบงานย่อย" title="ลบงานย่อย">🗑</button></div><div class="srR2"><label class="tcb" style="display:${none0?'inline-flex':'none'};align-items:center;gap:4px;font-size:11px;color:var(--mut)"><input type="checkbox" class="tc" style="width:auto;margin:0"${none0&&s.start?' checked':''}>ชั่วคราว</label><input class="s" type="date" title="วันเริ่ม" value="${s.start||iso(d0)}"><input class="e" type="date" title="วันสิ้นสุด" value="${s.end||iso(d0+6)}"><span class="dpw"><select class="dpt" title="ประเภทการเชื่อมโยง">${DT.map(k=>`<option value="${k}">${k} · ${DTN[k]}</option>`).join('')}</select><select class="dpp" title="เชื่อมกับงานไหน"><option value="">🔗 ไม่เชื่อมโยง</option></select><span class="dplw">เว้น<input class="dpl" type="number" step="1" value="0" title="Lag: จำนวนวันที่เว้น (ใส่ค่าติดลบได้ = เหลื่อมเข้ามา)">วัน</span></span></div><input class="nt" placeholder="โน้ตของงานย่อย (ไม่บังคับ)" value="${esc(s.notes||'')}"><span class="tglb">แท็ก:</span>`;
-  const k=mkpk(s.owners||[]);r.appendChild(k.el);r._pk=k;r._h=s.hidden;r._sid=s.sid||'';r._k=s.sid||('k'+(++fsK));r._dv=dvOf(s.dep);r.querySelector('.dpt').value=s.dep&&DT.includes(s.dep.type)?s.dep.type:'FS';r.querySelector('.dpl').value=s.dep?parseInt(s.dep.lag)||0:0;
+  const k=mkpk(s.owners||[]);r.appendChild(k.el);r._pk=k;r._h=s.hidden;r._sid=s.sid||'';r._k=s.sid||('k'+(++fsK));
   const tk=pick(s.tags||[],()=>tags,'ยังไม่มีแท็ก เพิ่มได้จากปุ่ม “🏷️ แท็ก” บนแถบเครื่องมือ');r.appendChild(tk.el);r._tk=tk;
   r.querySelector('.ss').onchange=e=>{const none=e.target.value=='none',cb=r.querySelector('.tc');r.querySelector('.tcb').style.display=none?'inline-flex':'none';if(!none)cb.checked=false;depRecalc()};
-  depWire(r,()=>rowKey(r));
+  depInitCtl(r,()=>rowKey(r),depsRaw(s));
   r.querySelector('.t').addEventListener('input',()=>depRefresh());
   r.querySelector('.s').addEventListener('input',()=>{lagSync(rowKey(r));depRecalc()});
   r.querySelector('.e').addEventListener('input',()=>{lagSync(rowKey(r));depRecalc()});
@@ -909,42 +967,80 @@ function edit(id){
  const dvOf=dep=>!dep?'':(dep.tid&&dep.tid!=id)?(dep.sid?dep.tid+':'+dep.sid:dep.tid):(dep.sid?'SID:'+dep.sid:'');
  const ctlOf=key=>key==MAINK?q('#mdepw'):fRows().find(r=>rowKey(r)==key);
  const mapIn=ref=>{if(!id||!ref)return ref;if(ref==id)return MAINK;if(ref.startsWith(id+':')){const sid=ref.slice(id.length+1),r=fRows().find(x=>x._sid==sid);return r?rowKey(r):''}if(ref.startsWith(id+'#'))return'';return ref};
- const predOf=key=>{if(key.startsWith(FK)){const c=ctlOf(key);if(!c)return'';const v=c.querySelector('.dpp').value||c._dv||'';return v.startsWith('SID:')?(()=>{const r=fRows().find(x=>x._sid==v.slice(4));return r?rowKey(r):''})():v}
-  const nd=depI().N.get(key);if(!nd)return'';const d=depNorm(nd.t,nd.y);return d?mapIn(d.ref):''};
- const reaches=(from,target)=>{let c=from,g=0;while(c&&g++<400){if(c===target)return true;c=predOf(c)}return false};
+  const dLines=c=>[...c.querySelectorAll('.dpw')];
+  const predsOf=key=>{if(key.startsWith(FK)){const c=ctlOf(key);if(!c)return[];return dLines(c).map(ln=>{const v=ln.querySelector('.dpp').value||ln._dv||'';return v.startsWith('SID:')?(()=>{const r=fRows().find(x=>x._sid==v.slice(4));return r?rowKey(r):''})():v}).filter(Boolean)}
+   const nd=depI().N.get(key);if(!nd)return[];return depNormAll(nd.t,nd.y).map(d=>mapIn(d.ref)).filter(Boolean)};
+  const reaches=(from,target)=>{const seen=new Set(),st=[from];while(st.length&&seen.size<3000){const c=st.pop();if(!c||seen.has(c))continue;if(c===target)return true;seen.add(c);predsOf(c).forEach(p=>st.push(p))}return false};
  const fDates=key=>{if(key==MAINK){const has=!q('#subs').children.length&&(ms!='none'||tent);return{s:q('#fs').value,e:q('#fe').value,ok:has&&!!q('#fs').value&&!!q('#fe').value}}
   if(key.startsWith(FK)){const r=ctlOf(key);if(!r)return{ok:false};const sv=r.querySelector('.s').value,ev=r.querySelector('.e').value,has=r.querySelector('.ss').value!='none'||r.querySelector('.tc').checked;return{s:sv,e:ev,ok:has&&!!sv&&!!ev}}
   const nd=depI().N.get(key);return nd&&hasD(nd.y)?{s:nd.y.start,e:nd.y.end,ok:true}:{ok:false}};
  const setDates=(key,a,b)=>{if(key==MAINK){q('#fs').value=a;q('#fe').value=b;fsVal=a;feVal=b}else{const r=ctlOf(key);if(r){r.querySelector('.s').value=a;r.querySelector('.e').value=b}}};
  const extOpts=()=>{const out=[];sortT().forEach(T=>{if(T.id==id)return;const sb=T.subs||[];if(sb.length)out.push({g:T.title,items:sb.map((y,i)=>({k:y.sid?T.id+':'+y.sid:T.id+'#'+i,l:y.title}))});else if(!isRep(T))out.push({g:null,items:[{k:T.id,l:T.title}]})});return out};
+ const curOf=ln=>{const sel=ln.querySelector('.dpp');let cur=sel.value||ln._dv||'';if(cur.startsWith('SID:')){const r=fRows().find(x=>x._sid==cur.slice(4));cur=r?rowKey(r):cur}return cur};
  function depRefresh(){const ext=extOpts(),ctls=[...fRows().map(r=>[rowKey(r),r]),[MAINK,q('#mdepw')]];
-  ctls.forEach(([k,c])=>{const sel=c.querySelector('.dpp');let cur=sel.value||c._dv||'';if(cur.startsWith('SID:')){const r=fRows().find(x=>x._sid==cur.slice(4));cur=r?rowKey(r):cur}
-   const opt=(v,l)=>`<option value="${esc(v)}"${v==cur?' selected':''}>${esc(l)}</option>`;
-   const own=k==MAINK?'':fRows().filter(r=>rowKey(r)!==k&&!reaches(rowKey(r),k)).map(r=>opt(rowKey(r),r.querySelector('.t').value.trim()||'(ยังไม่ตั้งชื่อ)')).join('');
-   const mains=ext.filter(g=>!g.g).map(g=>g.items[0]).filter(it=>!reaches(it.k,k)).map(it=>opt(it.k,it.l)).join('');
-   const groups=ext.filter(g=>g.g).map(g=>{const o=g.items.filter(it=>!reaches(it.k,k)).map(it=>opt(it.k,it.l)).join('');return o?`<optgroup label="${esc(g.g)}">${o}</optgroup>`:''}).join('');
-   sel.innerHTML='<option value="">🔗 ไม่เชื่อมโยง</option>'+(own?`<optgroup label="งานย่อยในงานนี้">${own}</optgroup>`:'')+(mains?`<optgroup label="งานหลัก (ไม่มีงานย่อย)">${mains}</optgroup>`:'')+groups;
-   if(sel.value&&(sel.value==c._dv||cur==sel.value))c._dv='';const on=!!sel.value;c.querySelector('.dpt').style.display=on?'':'none';c.querySelector('.dplw').style.display=on?'':'none';sel.classList.toggle('on',on)})}
- function depRecalc(){const keys=[...fRows().map(rowKey),MAINK];for(let pass=0;pass<=keys.length+1;pass++){let ch=false;keys.forEach(k=>{const c=ctlOf(k);if(!c)return;const pk=c.querySelector('.dpp').value;if(!pk)return;const pd=fDates(pk),me=fDates(k);if(!pd.ok||!me.ok)return;
-   const[a,b]=depTarget(c.querySelector('.dpt').value,{start:pd.s,end:pd.e},{start:me.s,end:me.e},parseInt(c.querySelector('.dpl').value)||0);if(iso(a)!==me.s||iso(b)!==me.e){setDates(k,iso(a),iso(b));ch=true}});if(!ch)break}}
- function lagSync(k){const c=ctlOf(k);if(!c)return;const pk=c.querySelector('.dpp').value;if(!pk)return;const pd=fDates(pk),me=fDates(k);if(pd.ok&&me.ok)c.querySelector('.dpl').value=depLagOf(c.querySelector('.dpt').value,{start:pd.s,end:pd.e},{start:me.s,end:me.e})}
- function depWire(c,kf){c.querySelector('.dpp').onchange=()=>{depRefresh();depRecalc()};c.querySelector('.dpt').onchange=()=>depRecalc();c.querySelector('.dpl').oninput=()=>depRecalc()}
+  ctls.forEach(([k,c])=>{const L=dLines(c),curs=L.map(curOf);
+   L.forEach((ln,li)=>{const sel=ln.querySelector('.dpp'),cur=curs[li],used=new Set(curs.filter((v,j)=>j!=li&&v));
+    const opt=(v,l)=>used.has(v)?'':`<option value="${esc(v)}"${v==cur?' selected':''}>${esc(l)}</option>`;
+    const own=k==MAINK?'':fRows().filter(r=>rowKey(r)!==k&&!reaches(rowKey(r),k)).map(r=>opt(rowKey(r),r.querySelector('.t').value.trim()||'(ยังไม่ตั้งชื่อ)')).join('');
+    const mains=ext.filter(g=>!g.g).map(g=>g.items[0]).filter(it=>!reaches(it.k,k)).map(it=>opt(it.k,it.l)).join('');
+    const groups=ext.filter(g=>g.g).map(g=>{const o=g.items.filter(it=>!reaches(it.k,k)).map(it=>opt(it.k,it.l)).join('');return o?`<optgroup label="${esc(g.g)}">${o}</optgroup>`:''}).join('');
+    sel.innerHTML='<option value="">🔗 ไม่เชื่อมโยง</option>'+(own?`<optgroup label="งานย่อยในงานนี้">${own}</optgroup>`:'')+(mains?`<optgroup label="งานหลัก (ไม่มีงานย่อย)">${mains}</optgroup>`:'')+groups;
+    if(sel.value&&(sel.value==ln._dv||cur==sel.value))ln._dv='';const on=!!sel.value;ln.querySelector('.dpt').style.display=on?'':'none';ln.querySelector('.dplw').style.display=on?'':'none';sel.classList.toggle('on',on);cbSync(ln)});
+   if(c._add)c._add.style.display=(L.length<8&&L.every(ln=>ln.querySelector('.dpp').value))?'':'none'})}
+ function depRecalc(){const keys=[...fRows().map(rowKey),MAINK];for(let pass=0;pass<=keys.length+1;pass++){let ch=false;keys.forEach(k=>{const c=ctlOf(k);if(!c)return;const me=fDates(k);if(!me.ok)return;let best=null;dLines(c).forEach(ln=>{const pk=ln.querySelector('.dpp').value;if(!pk)return;const pd=fDates(pk);if(!pd.ok)return;const r=depTarget(ln.querySelector('.dpt').value,{start:pd.s,end:pd.e},{start:me.s,end:me.e},parseInt(ln.querySelector('.dpl').value)||0);if(!best||r[0]>best[0])best=r});if(best&&(iso(best[0])!==me.s||iso(best[1])!==me.e)){setDates(k,iso(best[0]),iso(best[1]));ch=true}});if(!ch)break}}
+ function lagSync(k){const c=ctlOf(k);if(!c)return;const me=fDates(k);if(!me.ok)return;dLines(c).forEach(ln=>{const pk=ln.querySelector('.dpp').value;if(!pk)return;const pd=fDates(pk);if(pd.ok)ln.querySelector('.dpl').value=depLagOf(ln.querySelector('.dpt').value,{start:pd.s,end:pd.e},{start:me.s,end:me.e})})}
+ const CBG=['งานย่อยในงานนี้','งานหลัก (ไม่มีงานย่อย)'];let cbClose=null,cbCur=null;
+ function cbSync(c){const b=c._cb;if(!b)return;const sel=c.querySelector('.dpp'),o=sel.value?sel.selectedOptions[0]:null;let t='🔗 ไม่เชื่อมโยง';if(o){const g=o.parentNode.tagName=='OPTGROUP'?o.parentNode.label:'';t='🔗 '+(g&&CBG.indexOf(g)<0?g+' › ':'')+o.textContent}b.textContent=t;b.title=t;b.classList.toggle('on',!!sel.value)}
+ function cbInit(c,kf){if(c._cb)return;const sel=c.querySelector('.dpp'),b=document.createElement('button');b.type='button';b.className='dpc';sel.style.display='none';sel.parentNode.insertBefore(b,sel.nextSibling);c._cb=b;c._kf=kf;b.onclick=()=>cbOpen(c);cbSync(c)}
+ function cbOpen(c){if(cbClose){const same=cbCur===c;cbClose();if(same)return}
+  const sel=c.querySelector('.dpp'),b=c._cb,key=c._kf(),cur=sel.value,items=[];
+  [...sel.children].forEach(e=>{if(e.tagName=='OPTGROUP')[...e.children].forEach(o=>items.push({v:o.value,l:o.textContent,g:e.label}))});
+  let prevKey='';if(key!=MAINK){const r=fRows().find(x=>rowKey(x)==key),p=r&&r.previousElementSibling;if(p)prevKey=rowKey(p)}
+  const pop=document.createElement('div');pop.className='dpop';pop.innerHTML='<input class="cbs" type="text" placeholder="🔍 พิมพ์ค้นหาชื่องาน..." autocomplete="off"><div class="cbl"></div><div class="cbh">↑↓ เลื่อน · Enter เลือก · Esc ปิด</div>';document.body.appendChild(pop);
+  const inp=pop.querySelector('.cbs'),box=pop.querySelector('.cbl');let vis=[],hi=0,qs='';
+  const hl=(s,q)=>{const i=q?s.toLowerCase().indexOf(q):-1;return i<0?esc(s):esc(s.slice(0,i))+'<mark>'+esc(s.slice(i,i+q.length))+'</mark>'+esc(s.slice(i+q.length))};
+  const mark=ns=>{box.querySelectorAll('.cbi').forEach(e=>e.classList.toggle('hi',+e.dataset.i==hi));if(!ns){const e=box.querySelector('.cbi.hi');if(e)e.scrollIntoView({block:'nearest'})}};
+  const draw=keep=>{qs=inp.value.trim().toLowerCase();vis=[];let h='';
+   const add=(it,note)=>{vis.push(it);const d=fDates(it.v),sm=[note,d.ok?fr(d.s,d.e):''].filter(Boolean).join(' · ');h+=`<div class="cbi${it.v==cur?' cur':''}" data-i="${vis.length-1}"><span>${it.v==cur?'✓ ':''}${hl(it.l,qs)}</span>${sm?`<small>${esc(sm)}</small>`:''}</div>`};
+   if(!qs){vis.push({v:'',l:''});h+=`<div class="cbi${!cur?' cur':''}" data-i="0"><span>${!cur?'✓ ':''}🔗 ไม่เชื่อมโยง</span></div>`;const pv=items.find(x=>x.v==prevKey);if(pv){h+='<div class="cbg">แนะนำ</div>';add(pv,'งานก่อนหน้า')}}
+   let lg=null;items.forEach(it=>{if(qs&&!(it.l.toLowerCase().includes(qs)||it.g.toLowerCase().includes(qs)))return;if(it.g!==lg){lg=it.g;h+=`<div class="cbg">${esc(it.g)}</div>`}add(it)});
+   if(qs&&!vis.length)h+=`<div class="cbe">ไม่พบงานที่ตรงกับ “${esc(inp.value.trim())}”</div>`;
+   box.innerHTML=h;if(!keep){const ci=cur?vis.findIndex(x=>x.v==cur):-1;hi=qs?0:(ci>=0?ci:(vis.length>1?1:0))}mark()};
+  const pos=()=>{if(!b.isConnected){close();return}const r=b.getBoundingClientRect(),W=Math.min(Math.max(r.width,300),innerWidth-16),below=innerHeight-r.bottom-12,above=r.top-12,up=below<260&&above>below;pop.style.width=W+'px';pop.style.left=Math.max(8,Math.min(r.left,innerWidth-W-8))+'px';const mh=Math.max(120,Math.min(300,(up?above:below)-80));box.style.maxHeight=mh+'px';if(up){pop.style.top='auto';pop.style.bottom=(innerHeight-r.top+4)+'px'}else{pop.style.bottom='auto';pop.style.top=(r.bottom+4)+'px'}};
+  const close=()=>{document.removeEventListener('pointerdown',od,true);removeEventListener('scroll',pos,true);removeEventListener('resize',pos);pop.remove();cbClose=null;cbCur=null};
+  const od=e=>{if(!pop.contains(e.target)&&e.target!==b)close()};
+  const pick=v=>{close();sel.value=v;sel.dispatchEvent(new Event('change'));b.focus()};
+  box.onmousedown=e=>e.preventDefault();box.onclick=e=>{const t=e.target.closest('.cbi');if(t&&vis[+t.dataset.i])pick(vis[+t.dataset.i].v)};box.onmousemove=e=>{const t=e.target.closest('.cbi');if(t&&+t.dataset.i!=hi){hi=+t.dataset.i;mark(true)}};
+  inp.oninput=()=>draw();inp.onkeydown=e=>{e.stopPropagation();if(e.key=='ArrowDown'||e.key=='ArrowUp'){e.preventDefault();if(vis.length){hi=(hi+(e.key=='ArrowDown'?1:-1)+vis.length)%vis.length;mark()}}else if(e.key=='Enter'){e.preventDefault();if(vis[hi])pick(vis[hi].v)}else if(e.key=='Escape'){e.preventDefault();close();b.focus()}else if(e.key=='Tab')close()};
+  cbClose=close;cbCur=c;document.addEventListener('pointerdown',od,true);addEventListener('scroll',pos,true);addEventListener('resize',pos);draw();pos();inp.focus()}
+ const depLineHTML=rm=>`<select class="dpt" title="ประเภทการเชื่อมโยง">${DT.map(k=>`<option value="${k}">${k} · ${DTN[k]}</option>`).join('')}</select><select class="dpp" title="เชื่อมกับงานไหน"><option value="">🔗 ไม่เชื่อมโยง</option></select><span class="dplw">เว้น<input class="dpl" type="number" step="1" value="0" title="Lag: จำนวนวันที่เว้น (ใส่ค่าติดลบได้ = เหลื่อมเข้ามา)">วัน</span>${rm?'<button type="button" class="del sm dpr" title="เอาการเชื่อมนี้ออก" aria-label="เอาการเชื่อมนี้ออก">✕</button>':''}`;
+ function depLineWire(c,ln){cbInit(ln,c._kf);const sel=ln.querySelector('.dpp');sel.onchange=()=>{if(!sel.value&&dLines(c).length>1)ln.remove();depRefresh();depRecalc()};ln.querySelector('.dpt').onchange=()=>depRecalc();ln.querySelector('.dpl').oninput=()=>depRecalc();const rm=ln.querySelector('.dpr');if(rm)rm.onclick=()=>{ln.remove();depRefresh();depRecalc()}}
+ function depAddLine(c,d){const ln=document.createElement('span');ln.className='dpw dpx';ln.innerHTML=depLineHTML(true);c._add.before(ln);if(d){ln._dv=dvOf(d);ln.querySelector('.dpt').value=DT.includes(d.type)?d.type:'FS';ln.querySelector('.dpl').value=parseInt(d.lag)||0}depLineWire(c,ln);return ln}
+ function depInitCtl(c,kf,list){c._kf=kf;const first=c.querySelector('.dpw'),b=document.createElement('button');b.type='button';b.className='ghost sm dpa';b.textContent='+ เชื่อมเพิ่ม';b.title='ให้งานนี้รอหลายงาน (เชื่อมกับงานอื่นเพิ่มอีกงาน)';first.after(b);c._add=b;
+  const f0=list[0];if(f0){first._dv=dvOf(f0);first.querySelector('.dpt').value=DT.includes(f0.type)?f0.type:'FS';first.querySelector('.dpl').value=parseInt(f0.lag)||0}
+  list.slice(1).forEach(d=>depAddLine(c,d));depLineWire(c,first);b.onclick=()=>{const ln=depAddLine(c,null);depRefresh();if(ln._cb)ln._cb.click()}}
  let fsK=0;
- {const mw=q('#mdepw');mw._dv=dvOf(t.dep);mw.querySelector('.dpt').value=t.dep&&DT.includes(t.dep.type)?t.dep.type:'FS';mw.querySelector('.dpl').value=t.dep?parseInt(t.dep.lag)||0:0;depWire(mw,()=>MAINK)}
+ depInitCtl(q('#mdepw'),()=>MAINK,depsRaw(t));
  q('#fs').addEventListener('input',()=>{lagSync(MAINK);depRecalc()});q('#fe').addEventListener('input',()=>{lagSync(MAINK);depRecalc()});
  (t.subs||[]).forEach(addSub);sy();depRefresh();
+ if(fx&&id){const md=m.querySelector('.md'),kids=[...md.children],bi=kids.findIndex(e=>e.classList.contains('sh')&&e.textContent.trim()=='งานย่อย'),fr0=focusSub!=null?fRows()[focusSub]:null,fm=fr0?'s':((t.subs||[]).length?'m':'');
+  if(bi>0&&fm){kids.forEach((e,i)=>{if(i==0||e.classList.contains('ft'))return;e.dataset.g=i<bi?'m':'s'});
+   md.classList.add(fm=='s'?'fxs':'fxm');const h2=md.querySelector('h2'),h2o=h2.innerHTML,fxb=q('#fxall');fxb.style.display='';
+   if(fm=='s'){fr0.classList.add('cur');h2.innerHTML='<small>'+esc(t.title)+' ›</small><br>แก้ไขงานย่อย'}
+   else h2.insertAdjacentHTML('afterend','<p class="hint fxn">แก้ไขเฉพาะงานหลัก · มีงานย่อย '+(t.subs||[]).length+' งานซ่อนอยู่ (กด “แก้ไขทั้งงาน” เพื่อดู/แก้งานย่อย)</p>');
+   fxb.onclick=()=>{md.classList.remove('fxs','fxm');md.querySelectorAll('.fxn').forEach(e=>e.remove());h2.innerHTML=h2o;fxb.style.display='none';if(fr0)fr0.classList.remove('cur');md.scrollTop=0}}}
  q('#as').onclick=()=>addSub({});
  if(q('#dl'))q('#dl').onclick=async()=>{if(await askConfirm('ลบงานนี้และงานย่อยทั้งหมด? (งานจะถูกย้ายไปถังขยะ กู้คืนได้ภายใน 30 วัน)')){await del(id);m.remove()}};
  q('#sv').onclick=async()=>{
   const title=q('#ft').value.trim();if(!title)return toast('กรุณากรอกชื่องาน');
-  const fsAllRows=[...m.querySelectorAll('.sr')],refKeys=new Set([...fsAllRows.map(r=>r.querySelector('.dpp').value),q('#mdepw .dpp').value].filter(Boolean)),sidMap=new Map(),pendSid=new Map(),nsid=()=>'s'+Math.random().toString(36).slice(2,9);
+  const fsAllRows=[...m.querySelectorAll('.sr')],refKeys=new Set([...fsAllRows.flatMap(r=>dLines(r).map(ln=>ln.querySelector('.dpp').value)),...dLines(q('#mdepw')).map(ln=>ln.querySelector('.dpp').value)].filter(Boolean)),sidMap=new Map(),pendSid=new Map(),nsid=()=>'s'+Math.random().toString(36).slice(2,9);
   fsAllRows.forEach(r=>{const sid=r._sid||(refKeys.has(rowKey(r))?nsid():'');if(sid)sidMap.set(rowKey(r),sid)});
-  const toDep=c=>{const v=c.querySelector('.dpp').value;if(!v)return null;const type=c.querySelector('.dpt').value,lag=parseInt(c.querySelector('.dpl').value)||0;let d=null;
+  const toDep=ln=>{const v=ln.querySelector('.dpp').value;if(!v)return null;const type=ln.querySelector('.dpt').value,lag=parseInt(ln.querySelector('.dpl').value)||0;let d=null;
    if(v.startsWith(FK)){const sid=sidMap.get(v);if(sid&&v!==MAINK)d={sid}}
    else if(v.includes('#')){const[tid,ix]=v.split('#'),T=tasks.find(x=>x.id==tid),y=T&&(T.subs||[])[+ix];if(y){const sid=y.sid||pendSid.get(v)||nsid();if(!y.sid)pendSid.set(v,sid);d={tid,sid}}}
    else if(v.includes(':')){const p=v.indexOf(':');d={tid:v.slice(0,p),sid:v.slice(p+1)}}else d={tid:v};
-   if(!d)return null;if(type!='FS')d.type=type;d.lag=lag;return d};
-  const subs=fsAllRows.map(r=>{const g=k=>r.querySelector('.'+k).value,s=g('s')||iso(d0),e=g('e')||s,nt=g('nt'),o={title:g('t').trim(),status:g('ss'),owners:r._pk.get(),tags:r._tk.get()};if(nt.trim())o.notes=nt.trim();if(r._h)o.hidden=true;if(sidMap.get(rowKey(r)))o.sid=sidMap.get(rowKey(r));{const dd=toDep(r);if(dd)o.dep=dd}const tcEl=r.querySelector('.tc');if(o.status!='none'){o.start=s;o.end=e<s?s:e}else if(tcEl&&tcEl.checked){o.start=s;o.end=e<s?s:e}return o}).filter(x=>x.title);subs.forEach(o=>{if(o.dep&&!o.dep.tid&&!subs.some(y=>y.sid==o.dep.sid))delete o.dep});
+   if(!d)return null;if(type!='FS')d.type=type;d.lag=lag;return d};const toDeps=c=>dLines(c).map(toDep).filter(Boolean);
+  const subs=fsAllRows.map(r=>{const g=k=>r.querySelector('.'+k).value,s=g('s')||iso(d0),e=g('e')||s,nt=g('nt'),o={title:g('t').trim(),status:g('ss'),owners:r._pk.get(),tags:r._tk.get()};if(nt.trim())o.notes=nt.trim();if(r._h)o.hidden=true;if(sidMap.get(rowKey(r)))o.sid=sidMap.get(rowKey(r));{const dl=toDeps(r);if(dl.length){o.dep=dl[0];if(dl.length>1)o.deps=dl}}const tcEl=r.querySelector('.tc');if(o.status!='none'){o.start=s;o.end=e<s?s:e}else if(tcEl&&tcEl.checked){o.start=s;o.end=e<s?s:e}return o}).filter(x=>x.title);subs.forEach(o=>{if(!o.dep)return;const ok=(o.deps||[o.dep]).filter(d=>d.tid||subs.some(y=>y.sid==d.sid));if(ok.length){o.dep=ok[0];if(ok.length>1)o.deps=ok;else delete o.deps}else{delete o.dep;delete o.deps}});
   const rec={title,owners:mp.get(),tags:tgp.get(),subs};if(q('#fcal').checked)rec.cal=true;if(t.hidden)rec.hidden=true;if(mc!=null)rec.color=mc;
   const fn=q('#fn').value.trim();if(fn)rec.notes=fn;
   if(typeof t.order=='number')rec.order=t.order;else if(!id&&tasks.length&&tasks.every(x=>typeof x.order=='number'))rec.order=Math.max(...tasks.map(x=>x.order))+1;
@@ -953,7 +1049,7 @@ function edit(id){
   else if(tent){const s=q('#fs').value,e=q('#fe').value;if(s&&e){rec.start=s;rec.end=e<s?s:e}}
   rec.repeat=rec.start?rp:'none';
   if(rec.repeat!='none'){const ru=q('#ru').value;if(ru)rec.repeatUntil=ru<rec.start?rec.start:ru;if(t.occ)rec.occ=remapOcc(t.occ,t.start,rec.start,t.repeat||'monthly',rec.repeat)}
-  if(rec.repeat=='none'&&rec.start){const dd=toDep(q('#mdepw'));if(dd)rec.dep=dd}}
+  if(rec.repeat=='none'&&rec.start){const dl=toDeps(q('#mdepw'));if(dl.length){rec.dep=dl[0];if(dl.length>1)rec.deps=dl}}}
   if(id&&db){const cur=tasks.find(x=>x.id==id);
    if(!cur){if(!(await askConfirm('งานนี้ถูกลบโดยคนอื่นไปแล้วระหว่างที่คุณเปิดแก้ไขอยู่ ต้องการบันทึกกลับเข้าไปใหม่หรือไม่?')))return}
    else if(canon(cur)!==snap0){if(!(await askConfirm('มีคนอื่นแก้ไขงานนี้ระหว่างที่คุณเปิดอยู่ ถ้าบันทึกตอนนี้ การแก้ไขของเขาจะถูกเขียนทับ — กด “ยกเลิก” แล้วปิดหน้าต่างนี้เพื่อเปิดใหม่ดูข้อมูลล่าสุดได้ หรือกด “ยืนยัน” เพื่อบันทึกทับ')))return}}
@@ -1029,16 +1125,18 @@ sc.onclick=e=>{if(Date.now()-sup<100)return;const g=k=>e.target.closest(k);
  const cpb=g('[data-cp]');if(cpb){const v=cpb.dataset.cp;if(!v||calSel.has(v))calSel.clear();else calSel=new Set([v]);render();return}
  const mr=g('[data-more]');if(mr){calDay(+mr.dataset.more);return}
  const ok=g('[data-ok]');if(ok){occInfo(ok.dataset.id,ok.dataset.ok);return}
- const r=g('[data-id]');if(r)info(r.dataset.id,r.dataset.s)};
+ const r=g('[data-id]');if(r)openT(r.dataset.id,r.dataset.s,e)};
 let dg=null,bd=null;
 $('#fltBtn').onclick=e=>{e.stopPropagation();document.querySelectorAll('.fbwrap.open').forEach(x=>{if(x.id!='fltWrap')x.classList.remove('open')});$('#fltWrap').classList.toggle('open')};
 $('#mgBtn').onclick=e=>{e.stopPropagation();document.querySelectorAll('.fbwrap.open').forEach(x=>{if(x.id!='mgWrap')x.classList.remove('open')});$('#mgWrap').classList.toggle('open')};
 $('#mgPop').addEventListener('click',()=>$('#mgWrap').classList.remove('open'));
 $('#mobMenu').onclick=()=>{document.body.classList.toggle('fbOpen')};
 $('#trBtn').onclick=trashUI;
-$('#fltClr').onclick=()=>{pf='';tf.clear();sf.clear();render()};
-$('#pfPop').onclick=e=>{const b=e.target.closest('[data-p]');if(b){pf=b.dataset.p;render()}};
-$('#tfPop').onclick=e=>{const b=e.target.closest('[data-t]');if(!b)return;const v=b.dataset.t;if(v=='__c')tf.clear();else tf.has(v)?tf.delete(v):tf.add(v);render()};
+$('#fltClr').onclick=()=>{pfs.clear();tf.clear();sf.clear();render()};
+$('#fltPop').addEventListener('change',e=>{const c=e.target.closest('input[data-fk]');if(!c)return;const S=c.dataset.fk=='p'?pfs:tf,v=c.dataset.v;if(c.checked)S.add(v);else S.delete(v);render()});
+$('#fltPop').addEventListener('click',e=>{const h=e.target.closest('.fxh');if(h){const k=h.dataset.fx;fxOpen[k]=!fxOpen[k];fltRender();if(fxOpen[k]){const qi=h.closest('.fx').querySelector('.fxq');if(qi&&qi.style.display!='none')qi.focus()}return}const c=e.target.closest('.fxc');if(c){(c.dataset.fc=='p'?pfs:tf).clear();render()}});
+$('#fltPop').addEventListener('input',e=>{const qi=e.target.closest('.fxq');if(!qi)return;fxQ[qi.dataset.fq]=qi.value;fltRender()});
+$('#fchips').addEventListener('click',e=>{const c=e.target.closest('[data-chip]');if(!c)return;const k=c.dataset.chip,v=c.dataset.v;if(k=='all'){pfs.clear();tf.clear();sf.clear()}else if(k=='p')pfs.delete(v);else if(k=='t')tf.delete(v);else sf.delete(v);render()});
 $('#sfPop').onclick=e=>{const b=e.target.closest('[data-st]');if(!b)return;const v=b.dataset.st;if(v=='__c')sf.clear();else sf.has(v)?sf.delete(v):sf.add(v);render()};
 document.addEventListener('click',e=>{if(e.target.isConnected&&!e.target.closest('.fbwrap')){$('#fltWrap').classList.remove('open');$('#mgWrap').classList.remove('open');$('#moreWrap').classList.remove('open');$('#vwWrap').classList.remove('open');$('#vmWrap').classList.remove('open')}});
 $('#sq').oninput=e=>{sq=e.target.value.trim().toLowerCase();render()};
@@ -1062,16 +1160,16 @@ addEventListener('pointerup',async()=>{
   const oldR=fr(iso(d.s),iso(d.f)),newR=fr(a,z);logAct('เลื่อนวันที่',isSub?d.x.title+' ('+d.t.title+')':d.t.title,oldR+' → '+newR,d.t.id);
   if(!isSub&&isRep(d.t)){const f={start:a,end:z};if(d.t.occ&&d.t.start!=a)f.occ=remapOcc(d.t.occ,d.t.start,a,d.t.repeat,d.t.repeat);await patch(d.t.id,f);return}
   {const W=cloneT(tasks),wt=W.find(x=>x.id==d.t.id),node=wt&&(isSub?(wt.subs||[])[+d.i]:wt);if(!node){render();return}node.start=a;node.end=z;
-   const dn=depNorm(wt,node);if(dn){const pn=depIndex(W).N.get(dn.ref);if(pn&&hasD(pn.y))node.dep={...node.dep,lag:depLagOf(dn.type,pn.y,node)}}
+    {const dns=depNormAll(wt,node);if(dns.length){const IX=depIndex(W).N,raw=depsRaw(node).map(z=>({...z}));dns.forEach(dn=>{const pn=IX.get(dn.ref);if(pn&&hasD(pn.y))raw[dn.ix].lag=depLagOf(dn.type,pn.y,node)});node.dep=raw[0];if(Array.isArray(node.deps)&&node.deps.length)node.deps=raw}}
    const key=isSub?(node.sid?wt.id+':'+node.sid:wt.id+'#'+d.i):wt.id,ch=depPropagate(W,[key]);ch.add(wt.id);
    const mv=await depWrite(W,[wt.id,...[...ch].filter(x=>x!=wt.id)],key);if(mv)toast('🔗 เลื่อนงานที่เชื่อมโยงตามไปด้วย '+mv+' งาน')}return}
  if(dg&&dg.m)sup=Date.now();dg=null;sc.classList.remove('dr')});
 
 function exportTasks(){const tOk=(a,b)=>!tf.size||(a||[]).some(x=>tf.has(x))||(b||[]).some(x=>tf.has(x)),qk=ti=>!sq||String(ti||'').toLowerCase().includes(sq),so=x=>!sf.size||sf.has(st(x)),res=[];
  sortT().forEach(t=>{if(t.hidden&&!showH)return;const S=t.subs||[];
-  if(S.length){const subs=S.filter(x=>(showH||!x.hidden)&&(!pf||eoF(t,x).includes(pf))&&tOk(t.tags,x.tags)&&(qk(t.title)||qk(x.title))&&so(x));if(subs.length)res.push({...t,subs})}
-  else if((!pf||(t.owners||[]).includes(pf))&&tOk(t.tags)&&qk(t.title)&&so(t))res.push(t)});return res}
-function fltNote(){const a=[pf&&'คน: '+pf,tf.size&&'แท็ก: '+[...tf].join(', '),sf.size&&'สถานะ: '+[...sf].map(k=>ST[k]).join(', '),sq&&'ค้นหา: '+sq].filter(Boolean);return a.length?' · ตัวกรอง — '+a.join(' / '):''}
+  if(S.length){const subs=S.filter(x=>(showH||!x.hidden)&&pfOk(eoF(t,x))&&tOk(t.tags,x.tags)&&(qk(t.title)||qk(x.title))&&so(x));if(subs.length)res.push({...t,subs})}
+  else if(pfOk(t.owners)&&tOk(t.tags)&&qk(t.title)&&so(t))res.push(t)});return res}
+function fltNote(){const a=[pfs.size&&'คน: '+[...pfs].join(', '),tf.size&&'แท็ก: '+[...tf].join(', '),sf.size&&'สถานะ: '+[...sf].map(k=>ST[k]).join(', '),sq&&'ค้นหา: '+sq].filter(Boolean);return a.length?' · ตัวกรอง — '+a.join(' / '):''}
 function buildPrintable(){
  const line=(label,val)=>val?`<div class="pline">${label}: ${esc(val)}</div>`:'';
  const header=`<h1>${esc(boardTitle)}</h1><div class="pmeta">พิมพ์เมื่อ ${dd(iso(Math.floor(now())))}${esc(fltNote())}</div>`;
@@ -1098,7 +1196,7 @@ function buildPrintable(){
 function buildPrintablePerson(){
  const line=(label,val)=>val?`<div class="pline">${label}: ${esc(val)}</div>`:'';
  const header=`<h1>${esc(boardTitle)} · รายบุคคล</h1><div class="pmeta">พิมพ์เมื่อ ${dd(iso(Math.floor(now())))}${esc(fltNote())}</div>`;
- const P=pf?[pf]:orderedPeople();
+ const P=pfs.size?orderedPeople().filter(x=>pfs.has(x)):orderedPeople();
  const blocks=[];
  P.forEach(name=>{
   const items=[];
@@ -1156,7 +1254,7 @@ function buildCSVTask(){
  return'﻿'+rows.map(r=>r.map(csvEsc).join(',')).join('\r\n')}
 function buildCSVPerson(){
  const rows=[['ผู้รับผิดชอบ','งานหลัก','งานย่อย','แท็ก','วันเริ่ม','วันสิ้นสุด','สถานะ','เชื่อมโยงงาน','โน้ต']];
- const P=pf?[pf]:orderedPeople();
+ const P=pfs.size?orderedPeople().filter(x=>pfs.has(x)):orderedPeople();
  P.forEach(name=>{exportTasks().forEach(t=>{
   const S=t.subs||[],own=(t.owners||[]).includes(name);
   if(S.length)S.filter(s=>eoF(t,s).includes(name)).forEach(s=>rows.push([name,t.title,s.title,((s.tags&&s.tags.length?s.tags:t.tags)||[]).join('; '),s.start||'',s.end||'',ST[st(s)]||'',fsTxt(t.id,s),s.notes||'']));
@@ -1256,7 +1354,7 @@ $('#moreBtn').onclick=e=>{e.stopPropagation();document.querySelectorAll('.fbwrap
 $('#morePop').onclick=e=>{const b=e.target.closest('[data-act]');if(!b)return;$('#moreWrap').classList.remove('open');const[a,k]=b.dataset.act.split(':');
  if(a=='log')showLog();else if(a=='pdf')savePDF(k);else if(a=='csv')exportCSV(k);else if(a=='bk'&&k=='export')exportBackup();else if(a=='bk'&&k=='import')importBackup()};
 
-prefsReady=true;render(true);
+prefsReady=true;ceUI();render(true);
 setInterval(()=>render(),60000);
 document.fonts&&document.fonts.ready.then(()=>render());
 
@@ -1266,13 +1364,13 @@ document.fonts&&document.fonts.ready.then(()=>render());
   userNS=u;
   if(u&&u.can&&u.can('data.write')===false)canW=false;
   if(u&&u.id){try{myId=await u.id()}catch(e){}}
-  if(!d)throw 0;db=d;status=canW?(window.__SHARED?'ใช้ร่วมกันทั้งทีม':'บันทึกในเบราว์เซอร์นี้'):'ดูได้อย่างเดียว';
+  if(!d)throw 0;rawDb=d;try{db=wrapDb(d)}catch(e){db=d}uUI();status=canW?(window.__SHARED?'ใช้ร่วมกันทั้งทีม':'บันทึกในเบราว์เซอร์นี้'):'ดูได้อย่างเดียว';
   db.doc('meta/people').onSnapshot(s=>{people=s.exists?(s.data().names||[]):[];render()},()=>{});
   db.doc('meta/tags').onSnapshot(s=>{tags=s.exists?(s.data().names||[]):[];render()},()=>{});
   db.doc('meta/title').onSnapshot(s=>{if(s.exists&&s.data().name)boardTitle=s.data().name;render()},()=>{});
   db.doc('meta/log').onSnapshot(s=>{logEntries=s.exists?(s.data().entries||[]):[]},()=>{});
   db.collection('logs').orderBy('ts','desc').limit(500).onSnapshot(s=>{newLogs=s.docs.map(x=>x.data())},()=>{});
-  let trPurged=false;db.collection('trash').onSnapshot(s=>{trashItems=s.docs.map(x=>({id:x.id,...x.data()}));if(!trPurged&&canW){trPurged=true;trashItems.filter(x=>Date.now()-(x._deletedAt||0)>TRASH_DAYS*864e5).forEach(x=>db.doc('trash/'+x.id).delete().catch(()=>{}))}},()=>{});
+  let trPurged=false;db.collection('trash').onSnapshot(s=>{trashItems=s.docs.map(x=>({id:x.id,...x.data()}));if(!trPurged&&canW){trPurged=true;trashItems.filter(x=>Date.now()-(x._deletedAt||0)>TRASH_DAYS*864e5).forEach(x=>rawDb.doc('trash/'+x.id).delete().catch(()=>{}))}},()=>{});
   db.doc('meta/pcolors').onSnapshot(s=>{const mp=s.exists?(s.data().map||{}):{};pcMap={};for(const k in mp)if(/^#[0-9a-f]{6}$/i.test(mp[k]))pcMap[k]=mp[k];applyPC();render()},()=>{});
   let firstT=true;db.collection('tasks').onSnapshot(s=>{tasks=s.docs.map(x=>({id:x.id,...x.data()}));render(firstT);if(firstT&&!document.querySelector('.ov')&&!owSkipped())setTimeout(()=>{if(!document.querySelector('.ov')){onWorking();owAddSkip()}},300);firstT=false},e=>{status='เชื่อมต่อข้อมูลไม่ได้ ('+e.code+')';render()});
  }catch(e){status='โหมดทดลอง (ข้อมูลไม่ถูกบันทึก)'}
