@@ -1,6 +1,6 @@
 /* Service worker: ทำให้เปิดแอปได้เร็วและเปิดหน้าเว็บได้แม้ออฟไลน์ (ข้อมูลงานยังดึงจาก Google Sheets ตามปกติ)
    เปลี่ยนเลข CACHE ทุกครั้งที่อยากบังคับให้ทุกเครื่องล้างแคชเก่า */
-const CACHE = 'ct-v3';
+const CACHE = 'ct-v4';
 const SHELL = ['./', 'index.html', 'storage.js', 'storage-local.js', 'sheets-config.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 
 self.addEventListener('install', e => {

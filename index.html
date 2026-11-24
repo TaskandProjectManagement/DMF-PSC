@@ -259,8 +259,56 @@ textarea{display:block;width:100%;box-sizing:border-box;margin-top:3px;padding:7
 svg.fsl{position:absolute;left:0;top:0;pointer-events:none;z-index:0;overflow:visible}
 .tbR{display:flex;gap:6px;align-items:center;flex:none;white-space:nowrap}
 .ubtn{padding:5px 9px;font-size:15px;line-height:1}.ubtn:disabled{opacity:.35;cursor:default;border-color:var(--ln)}
-.fchips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:6px 16px;background:var(--pn);border-bottom:1px solid var(--ln);font-size:12px}.fchip{border-radius:99px;padding:2px 10px;font-size:12px;margin:0;border:1.5px solid var(--ac);background:var(--bg);color:var(--fg);cursor:pointer}.fchip b{font-weight:600;color:var(--mut);margin-left:2px}.fchip:hover b{color:var(--red)}.fchip.fcall{border-style:dashed;border-color:var(--ln);color:var(--mut)}
-#fltPop .fx{border:1px solid var(--ln);border-radius:10px;margin:4px 0;background:var(--bg)}#fltPop .fxh{display:flex;align-items:center;gap:8px;width:100%;border:0;background:transparent;border-radius:10px;padding:7px 10px;font-size:13px;font-weight:600;color:var(--fg);text-align:left;white-space:normal;cursor:pointer;margin:0}#fltPop .fxh .fxs{flex:1;font-weight:400;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:right}#fltPop .fxh.act .fxs{color:var(--ac);font-weight:600}#fltPop .fxa{transition:transform .15s;color:var(--mut)}#fltPop .fx.open .fxa{transform:rotate(180deg)}#fltPop .fxb{display:none;padding:0 8px 8px}#fltPop .fx.open .fxb{display:block}#fltPop .fxtools{display:flex;gap:6px;align-items:center;margin-bottom:6px}#fltPop .fxq{flex:1;min-width:0;margin:0;font-size:13px;padding:5px 8px}#fltPop .fxc{padding:3px 10px;font-size:12px;border-radius:8px;margin:0}#fltPop .fxl{max-height:220px;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:1px}#fltPop .fxi{display:flex;align-items:center;gap:8px;padding:5px 6px;border-radius:7px;cursor:pointer;font-size:13px;margin:0;font-weight:400;color:var(--fg)}#fltPop .fxi:hover{background:var(--pn2)}#fltPop .fxi input{width:auto;margin:0;flex:none}#fltPop .fxi .dot{width:9px;height:9px;border-radius:50%;flex:none}#fltPop .fxe{padding:8px;text-align:center;color:var(--mut);font-size:12px}
+.fchips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:7px 16px;background:var(--pn);border-bottom:1px solid var(--ln);font-size:12px}
+.fchip{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:3px 6px 3px 10px;font-size:12px;margin:0;border:1.5px solid var(--ac);background:color-mix(in srgb,var(--ac) 8%,var(--bg));color:var(--fg);cursor:pointer;transition:background .12s}
+.fchip[style*="--c"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,var(--bg))}
+.fchip b{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;font-size:10px;font-weight:700;background:var(--pn2);color:var(--mut)}.fchip:hover b{background:var(--red);color:#fff}
+.fchip.fcall{border-style:dashed;border-color:var(--ln);background:transparent;color:var(--mut);padding:3px 10px}.fchip.fcall:hover{color:var(--red);border-color:var(--red)}
+#fltPop{min-width:330px!important;max-width:min(94vw,440px)!important;padding:12px!important;border-radius:14px!important;box-shadow:0 12px 32px #0006!important;gap:8px!important}
+#fltPop .fhd{display:flex;align-items:center;justify-content:space-between;padding:0 2px 8px;border-bottom:1px solid var(--ln)}#fltPop .fht{font-weight:700;font-size:14px}
+#fltClr{align-self:auto!important;margin:0!important;padding:3px 10px!important;border:0!important;background:transparent!important;color:var(--red)!important;font-size:12px!important;border-radius:8px!important}#fltClr:hover{background:color-mix(in srgb,var(--red) 12%,transparent)!important}
+#fltPop .fx{border:1px solid var(--ln);border-radius:12px;margin:0;background:var(--bg);overflow:hidden;transition:border-color .15s,box-shadow .15s}#fltPop .fx.open{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac)}
+#fltPop .fxh{display:flex;align-items:center;gap:9px;width:100%;border:0;background:transparent;border-radius:0;padding:9px 10px;font-size:13px;font-weight:600;color:var(--fg);text-align:left;white-space:normal;cursor:pointer;margin:0}#fltPop .fxh:hover{background:var(--pn2)}
+#fltPop .fxb0{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:var(--pn2);font-size:14px;flex:none}#fltPop .fxh.act .fxb0{background:color-mix(in srgb,var(--ac) 22%,var(--pn2))}
+#fltPop .fxh .fxs{flex:1;display:flex;align-items:center;justify-content:flex-end;gap:6px;min-width:0;font-weight:400;font-size:12px}#fltPop .fxs .sx{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ac);font-weight:600}
+#fltPop .pill{background:var(--ac);color:var(--pn);border-radius:99px;font-size:11px;font-weight:700;padding:0 7px;min-width:18px;text-align:center;line-height:18px}
+#fltPop .minis{display:inline-flex}#fltPop .minis i{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:10px;font-weight:700;background:var(--c);color:var(--t);border:2px solid var(--bg);margin-left:-6px}#fltPop .minis i:first-child{margin-left:0}
+#fltPop .fxa{transition:transform .18s;color:var(--mut);flex:none}#fltPop .fx.open .fxa{transform:rotate(180deg)}
+#fltPop .fxb{display:none;padding:2px 8px 8px}#fltPop .fx.open .fxb{display:block;animation:fxin .16s ease}@keyframes fxin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+#fltPop .fxtools{display:flex;gap:6px;align-items:center;margin-bottom:6px}#fltPop .fxq{flex:1;min-width:0;margin:0;font-size:13px;padding:6px 12px;border-radius:99px}
+#fltPop .fxc{padding:4px 12px;font-size:12px;border-radius:99px;margin:0}
+#fltPop .fxl{max-height:240px;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:2px;scrollbar-width:thin}
+#fltPop .fxi{position:relative;display:flex;align-items:center;gap:9px;padding:6px 8px;border-radius:9px;cursor:pointer;font-size:13px;margin:0;font-weight:400;color:var(--fg);transition:background .1s}#fltPop .fxi:hover{background:var(--pn2)}
+#fltPop .fxi input{position:absolute;opacity:0;width:0;height:0;margin:0}
+#fltPop .fxi .ck{width:18px;height:18px;border-radius:6px;border:1.5px solid var(--ln);flex:none;display:grid;place-items:center;background:var(--bg);font-size:11px;line-height:1;color:transparent;transition:background .1s,border-color .1s}#fltPop .fxi .ck:after{content:'\2713';font-weight:700}
+#fltPop .fxi input:checked+.ck{background:var(--c,var(--ac));border-color:var(--c,var(--ac));color:var(--t,var(--pn))}#fltPop .fxi input:focus-visible+.ck{outline:2px solid var(--ac);outline-offset:2px}
+#fltPop .fxi.sel{background:color-mix(in srgb,var(--c,var(--ac)) 13%,transparent);font-weight:600}
+#fltPop .fxi .av{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700;flex:none;background:var(--c);color:var(--t)}
+#fltPop .fxi .tg{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;font-size:12px;font-weight:700;flex:none;background:var(--pn2);color:var(--mut)}#fltPop .fxi.sel .tg{background:var(--ac);color:var(--pn)}
+#fltPop .fxi .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#fltPop .fxi .n{font-size:11px;color:var(--mut);background:var(--pn2);border-radius:99px;padding:0 7px;min-width:18px;text-align:center;line-height:18px}
+#fltPop .fxe{padding:10px;text-align:center;color:var(--mut);font-size:12px}
+#fltPop .fdone{width:100%;border-radius:10px;padding:8px;font-size:13px;margin-top:2px}
+.sr{--sc:var(--s-ok);position:relative;background:var(--pn2);border:1px solid var(--ln);border-left:5px solid var(--sc);border-radius:12px;padding:10px 12px 12px;margin-bottom:14px;gap:8px;transition:border-color .15s,box-shadow .15s}
+.sr:focus-within{border-color:var(--ac);border-left-color:var(--sc);box-shadow:0 0 0 1px var(--ac)}
+.sr .t{font-weight:600}.sr .srn{flex:0 0 auto;min-width:22px;height:22px;border-radius:50%;display:inline-grid;place-items:center;font-size:12px;line-height:1;background:var(--sc);color:#fff}
+.sr .srt{font-size:12px}.srsum{display:none;flex:1 1 100%;font-size:12px;color:var(--mut);padding:0 2px}.sr.col>.srsum{display:block}.sr.col>*:not(.srR1):not(.srsum){display:none!important}
+.srtools{display:flex;gap:6px;margin:2px 0 8px}.srtools button{font-size:12px;padding:2px 10px;border-radius:99px;margin:0}
+/* --- filter menu v3: no clipped lists, grid of selectable cards --- */
+#fltPop{box-sizing:border-box;width:min(94vw,460px)!important;max-width:none!important;min-width:0!important;max-height:min(720px,calc(100vh - 120px))!important;overflow-y:auto!important;overscroll-behavior:contain;padding:12px!important;gap:10px!important;scrollbar-width:thin}
+#fltPop>*{flex:0 0 auto}
+#fltPop .fhd{position:sticky;top:-12px;z-index:5;margin:-12px -12px 0;padding:12px 14px 10px;background:var(--pn);border-bottom:1px solid var(--ln);border-radius:14px 14px 0 0}
+#fltPop .fx{overflow:visible;flex:0 0 auto;border-radius:14px}#fltPop .fx.open{box-shadow:none}
+#fltPop .fxh{border-radius:13px}#fltPop .fx.open .fxh{border-bottom:1px solid var(--ln);border-radius:13px 13px 0 0}
+#fltPop .fxb{padding:10px 10px 12px}
+#fltPop .fxl{max-height:none;overflow:visible;display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:6px}
+#fltPop .fxi{border:1px solid var(--ln);border-radius:11px;padding:7px 9px;background:var(--bg);min-width:0;align-items:center}
+#fltPop .fxi:hover{background:var(--pn2);border-color:color-mix(in srgb,var(--c,var(--ac)) 55%,var(--ln))}
+#fltPop .fxi.sel{border-color:var(--c,var(--ac));background:color-mix(in srgb,var(--c,var(--ac)) 14%,var(--bg))}
+#fltPop .fxi .nm{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.25}
+#fltPop .fxi .n{flex:none}
+#fltPop .fxe{grid-column:1/-1}
+@media(max-width:600px){#fltPop{position:fixed!important;left:8px!important;right:8px!important;top:auto!important;bottom:8px!important;width:auto!important;max-height:80vh!important}}
+#fltPop .fdone{position:sticky;bottom:-12px;z-index:5;margin:0 -12px -12px;width:calc(100% + 24px);border-radius:0 0 14px 14px;padding:11px;box-shadow:0 -10px 12px -6px var(--pn)}
 .ceb.on{border-color:var(--ac);color:var(--ac)}
 .md.fxs [data-g="m"],.md.fxm [data-g="s"]{display:none!important}.md.fxs [data-g="s"]:not(#subs):not(.dephelp){display:none!important}.md.fxs #subs>.sr:not(.cur){display:none!important}.md.fxs .sr.cur [data-mv],.md.fxs #dl{display:none}.fxn{margin:-4px 0 10px}
 .sr.flash{animation:srflash 1.8s ease}@keyframes srflash{0%,65%{background:color-mix(in srgb,var(--ac) 20%,transparent);box-shadow:0 0 0 2px var(--ac)}100%{background:transparent;box-shadow:0 0 0 0 transparent}}
@@ -290,10 +338,11 @@ svg.fsl{position:absolute;left:0;top:0;pointer-events:none;z-index:0;overflow:vi
  <input id="sq" class="sqinp" placeholder="🔍 ค้นหาชื่องาน">
  <div class="fbwrap" id="vwWrap"><button class="fbbtn" id="vwBtn">👁 การแสดงผล ▾</button><div class="fbpop" id="vwPop"><button id="ca"></button><button id="sh" style="display:none"></button></div></div><div class="fbwrap" id="mgWrap"><button class="fbbtn" id="mgBtn">⚙️ จัดการ ▾</button><div class="fbpop" id="mgPop"><button id="tm">👥 เพิ่มรายชื่อ</button><button id="tgm">🏷️ เพิ่มแท็ก</button><button id="trBtn">🗑 ถังขยะ</button></div></div>
  <div class="fbwrap" id="fltWrap"><button class="fbbtn" id="fltBtn">🔎 ตัวกรอง ▾</button><div class="fbpop" id="fltPop">
-  <div id="pfWrap" class="fx"><button type="button" class="fxh" data-fx="p" aria-expanded="false"><span class="fxt">👤 ชื่อคน</span><span class="fxs mut">ทุกคน</span><span class="fxa">▾</span></button><div class="fxb"><div class="fxtools"><input class="fxq" data-fq="p" placeholder="🔍 ค้นหาชื่อ…" autocomplete="off"><button type="button" class="fxc" data-fc="p">ล้าง</button></div><div class="fxl" id="pfPop"></div></div></div>
-  <div id="tfWrap" class="fx"><button type="button" class="fxh" data-fx="t" aria-expanded="false"><span class="fxt">🏷️ แท็ก</span><span class="fxs mut">ทั้งหมด</span><span class="fxa">▾</span></button><div class="fxb"><div class="fxtools"><input class="fxq" data-fq="t" placeholder="🔍 ค้นหาแท็ก…" autocomplete="off"><button type="button" class="fxc" data-fc="t">ล้าง</button></div><div class="fxl" id="tfPop"></div></div></div>
+ <div class="fhd"><span class="fht">🔎 ตัวกรอง</span><button type="button" id="fltClr" class="flink">ล้างทั้งหมด</button></div>
+  <div id="pfWrap" class="fx"><button type="button" class="fxh" data-fx="p" aria-expanded="false"><span class="fxb0">👤</span><span class="fxt">ชื่อคน</span><span class="fxs"></span><span class="fxa">▾</span></button><div class="fxb"><div class="fxtools"><input class="fxq" data-fq="p" placeholder="🔍 ค้นหาชื่อ…" autocomplete="off"><button type="button" class="fxc" data-fc="p">ล้าง</button></div><div class="fxl" id="pfPop"></div></div></div>
+  <div id="tfWrap" class="fx"><button type="button" class="fxh" data-fx="t" aria-expanded="false"><span class="fxb0">🏷️</span><span class="fxt">แท็ก</span><span class="fxs"></span><span class="fxa">▾</span></button><div class="fxb"><div class="fxtools"><input class="fxq" data-fq="t" placeholder="🔍 ค้นหาแท็ก…" autocomplete="off"><button type="button" class="fxc" data-fc="t">ล้าง</button></div><div class="fxl" id="tfPop"></div></div></div>
   <div id="sfWrap"><div class="mh">📌 สถานะ <span class="mut">(เลือกได้หลายอัน)</span></div><div class="fsec" id="sfPop"></div></div>
-  <button type="button" id="fltClr" class="del">ล้างตัวกรองทั้งหมด</button>
+  <button type="button" id="fltDone" class="pri fdone">เสร็จสิ้น</button>
  </div></div>
  <button id="logBtn" style="display:none" title="ประวัติการแก้ไข">🕘 ประวัติ</button>
  <button id="owBtn" title="งานที่อยู่ในช่วงเวลาปัจจุบัน">⏳ On Working</button>
@@ -866,10 +915,14 @@ $('#undoBtn').onclick=()=>uRun(-1);$('#redoBtn').onclick=()=>uRun(1);
 document.addEventListener('keydown',e=>{if(!(e.ctrlKey||e.metaKey)||e.altKey)return;const k=(e.key||'').toLowerCase();if(k!='z'&&k!='y')return;const tg=e.target;if(tg&&tg.closest&&tg.closest('input,textarea,select,[contenteditable="true"]'))return;if(document.querySelector('.ov'))return;e.preventDefault();uRun(k=='y'||e.shiftKey?1:-1)});
 function fltRender(){
  const fa=document.activeElement,fk=fa&&fa.dataset&&fa.dataset.fk?fa.dataset.fk+'|'+fa.dataset.v:'';
- const one=(k,items,set,col)=>{const qs=fxQ[k].trim().toLowerCase(),L=items.filter(x=>!qs||x.toLowerCase().includes(qs)),el=$(k=='p'?'#pfPop':'#tfPop'),sc0=el.scrollTop;
-  el.innerHTML=L.length?L.map(x=>`<label class="fxi"><input type="checkbox" data-fk="${k}" data-v="${esc(x)}"${set.has(x)?' checked':''}>${col&&PCOLORS[x]?`<span class="dot" style="background:${PCOLORS[x]}"></span>`:''}<span>${esc(x)}</span></label>`).join(''):`<div class="fxe">ไม่พบ${k=='p'?'ชื่อ':'แท็ก'}ที่ตรงกับ “${esc(fxQ[k].trim())}”</div>`;el.scrollTop=sc0;
-  const w=el.closest('.fx'),hd=w.querySelector('.fxh');hd.classList.toggle('act',set.size>0);
-  hd.querySelector('.fxs').textContent=set.size?(set.size<=2?[...set].join(', '):set.size+(k=='p'?' คน':' รายการ')):(k=='p'?'ทุกคน':'ทั้งหมด');
+ const cP={},cT={};tasks.forEach(t=>{const ow=new Set(t.owners||[]),tg=new Set(t.tags||[]);(t.subs||[]).forEach(x=>{(x.owners||[]).forEach(o=>ow.add(o));(x.tags||[]).forEach(o=>tg.add(o))});ow.forEach(o=>cP[o]=(cP[o]||0)+1);tg.forEach(o=>cT[o]=(cT[o]||0)+1)});
+ const ini=x=>([...String(x).replace(/^[เแโใไ]+/,'')][0]||[...String(x)][0]||'').toUpperCase(),pcol=x=>PCOLORS[x]||'#9aa5a8';
+ const one=(k,items,set,isP)=>{const qs=fxQ[k].trim().toLowerCase(),L=items.filter(x=>!qs||x.toLowerCase().includes(qs)),el=$(k=='p'?'#pfPop':'#tfPop'),sc0=el.scrollTop,C=isP?cP:cT;
+  el.innerHTML=L.length?L.map(x=>{const sel=set.has(x),pc=isP?pcol(x):'',sty=isP?` style="--c:${pc};--t:${textForHex(pc)}"`:'';return`<label class="fxi${sel?' sel':''}"${sty}><input type="checkbox" data-fk="${k}" data-v="${esc(x)}"${sel?' checked':''}><span class="ck"></span>${isP?`<span class="av">${esc(ini(x))}</span>`:'<span class="tg">#</span>'}<span class="nm">${esc(x)}</span><span class="n">${C[x]||0}</span></label>`}).join(''):`<div class="fxe">ไม่พบ${isP?'ชื่อ':'แท็ก'}ที่ตรงกับ “${esc(fxQ[k].trim())}”</div>`;el.scrollTop=sc0;
+  const w=el.closest('.fx'),hd=w.querySelector('.fxh'),sm=hd.querySelector('.fxs');hd.classList.toggle('act',set.size>0);
+  if(!set.size)sm.innerHTML='<span class="mut">'+(isP?'ทุกคน':'ทั้งหมด')+'</span>';
+  else if(isP)sm.innerHTML='<span class="minis">'+[...set].slice(0,4).map(x=>`<i style="--c:${pcol(x)};--t:${textForHex(pcol(x))}">${esc(ini(x))}</i>`).join('')+'</span><span class="pill">'+set.size+'</span>';
+  else sm.innerHTML='<span class="sx">'+esc([...set].slice(0,2).join(', '))+(set.size>2?' …':'')+'</span><span class="pill">'+set.size+'</span>';
   w.classList.toggle('open',!!fxOpen[k]);hd.setAttribute('aria-expanded',!!fxOpen[k]);
   w.querySelector('.fxc').style.visibility=set.size?'':'hidden';w.querySelector('.fxq').style.display=items.length>6?'':'none'};
  one('p',fltP,pfs,true);one('t',tags,tf,false);
@@ -877,7 +930,7 @@ function fltRender(){
 function fltChips(){const c=$('#fchips');if(!c)return;const ch=[];
  [...pfs].forEach(x=>ch.push(['p',x,'👤 '+x,PCOLORS[x]]));[...tf].forEach(x=>ch.push(['t',x,'🏷️ '+x]));[...sf].forEach(k=>ch.push(['s',k,'📌 '+ST[k]]));
  if(!ch.length){c.style.display='none';c.innerHTML='';return}
- c.style.display='';c.innerHTML='<span class="mut">กำลังกรอง:</span>'+ch.map(([k,v,l,col])=>`<button type="button" class="fchip" data-chip="${k}" data-v="${esc(v)}" title="เอาตัวกรองนี้ออก"${col?` style="border-color:${col}"`:''}>${esc(l)} <b>✕</b></button>`).join('')+(ch.length>1?'<button type="button" class="fchip fcall" data-chip="all">ล้างทั้งหมด</button>':'')}
+ c.style.display='';c.innerHTML='<span class="mut">กำลังกรอง:</span>'+ch.map(([k,v,l,col])=>`<button type="button" class="fchip" data-chip="${k}" data-v="${esc(v)}" title="เอาตัวกรองนี้ออก"${col?` style="--c:${col}"`:''}>${esc(l)} <b>✕</b></button>`).join('')+(ch.length>1?'<button type="button" class="fchip fcall" data-chip="all">ล้างทั้งหมด</button>':'')}
 function toast(msg){
  let tw=document.getElementById('tw');
  if(!tw){tw=document.createElement('div');tw.id='tw';tw.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:50;display:flex;flex-direction:column;gap:6px;align-items:center;pointer-events:none';document.body.appendChild(tw)}
@@ -935,9 +988,9 @@ function edit(id,focusSub,fx){
  <p>เลือก “🔗 เชื่อมกับงานไหน” ที่งานย่อย (หรือที่งานหลักที่ไม่มีงานย่อย) แล้วเลือกประเภท เชื่อมได้กับงานย่อยในงานนี้ งานย่อยของงานหลักอื่น หรืองานหลักที่ไม่มีงานย่อย</p>
  <ul><li><b>FS เสร็จ → เริ่ม</b>: งานนี้เริ่มหลังงานที่เลือกเสร็จ (ใช้บ่อยที่สุด)</li><li><b>SS เริ่ม → เริ่ม</b>: งานนี้เริ่มพร้อมงานที่เลือก</li><li><b>FF เสร็จ → เสร็จ</b>: งานนี้เสร็จพร้อมงานที่เลือก</li><li><b>SF เริ่ม → เสร็จ</b>: งานนี้เสร็จเมื่องานที่เลือกเริ่ม (เช่น สัญญาเดิมสิ้นสุดเมื่อสัญญาใหม่เริ่ม)</li></ul>
  <p><b>เว้น x วัน</b> = ระยะห่างจากจุดที่เชื่อม ใส่ค่าติดลบได้ ถ้างานต้นทางเลื่อน งานนี้ (และงานที่ต่อกันทั้งสาย) จะเลื่อนตามอัตโนมัติ ถ้าลากหรือแก้วันที่งานนี้เอง ระบบจะปรับจำนวนวันที่เว้นให้ตามตำแหน่งใหม่ กด “+ เชื่อมเพิ่ม” เพื่อให้งานนี้รอได้หลายงาน (เช่น รอทั้งเอกสารและอนุมัติ) ระบบจะวางงานนี้ตามงานต้นทางที่ช้าที่สุด และงานต้นทางหนึ่งงานมีงานที่ตามได้หลายงาน</p></details>
- <div id="subs"></div><button type="button" class="ghost" id="as">+ เพิ่มงานย่อย</button>
+ <div class="srtools" id="srtools" style="display:none"><button type="button" class="ghost" data-sr="col">⌃ พับทั้งหมด</button><button type="button" class="ghost" data-sr="exp">⌄ ขยายทั้งหมด</button></div><div id="subs"></div><button type="button" class="ghost" id="as">+ เพิ่มงานย่อย</button>
  <div class="ft">${id?'<button class="danger" id="dl">ลบงาน</button>':''}<span class="sp"></span><button class="ghost" id="fxall" style="display:none">✏️ แก้ไขทั้งงาน</button><button class="ghost" id="cx">ปิด</button><button class="pri" id="sv">บันทึก</button></div>`);
- const q=s=>m.querySelector(s),sy=()=>{const h=q('#subs').children.length,showDt=!h&&!(ms=='none'&&!tent);q('#dt').style.display=showDt?'':'none';q('#mdepw').style.display=showDt&&rp=='none'?'':'none';if(showDt){q('#fs').value=fsVal;q('#fe').value=feVal}q('#stw').style.display=h?'none':'';q('#tentWrap').style.display=(!h&&ms=='none')?'':'none';q('#rpWrap').style.display=(h||(ms=='none'&&!tent))?'none':''};
+ const q=s=>m.querySelector(s),sy=()=>{const h=q('#subs').children.length,showDt=!h&&!(ms=='none'&&!tent);q('#dt').style.display=showDt?'':'none';q('#srtools').style.display=h>1?'':'none';q('#mdepw').style.display=showDt&&rp=='none'?'':'none';if(showDt){q('#fs').value=fsVal;q('#fe').value=feVal}q('#stw').style.display=h?'none':'';q('#tentWrap').style.display=(!h&&ms=='none')?'':'none';q('#rpWrap').style.display=(h||(ms=='none'&&!tent))?'none':''};
  q('#fs').oninput=e=>{fsVal=e.target.value};
  q('#fe').oninput=e=>{feVal=e.target.value};
  q('#stb').onclick=e=>{const k=e.target.dataset.st;if(k){ms=k;q('#stb').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.st==k));sy()}};
@@ -952,17 +1005,22 @@ function edit(id,focusSub,fx){
  q('#ntgt').onclick=()=>{q('#ntgt').style.display='none';q('#ntgw').style.display='';q('#ntg').focus()};q('#ntgb').onclick=addTag;q('#ntg').onkeydown=e=>{if(e.key=='Enter'){e.preventDefault();addTag()}};
  const addSub=s=>{const r=document.createElement('div');r.className='sr';
   const none0=(s.status||'ok')=='none';
-  r.innerHTML=`<div class="srR1"><button type="button" class="ghost sm" data-mv="-1" title="เลื่อนขึ้น" aria-label="เลื่อนขึ้น">↑</button><button type="button" class="ghost sm" data-mv="1" title="เลื่อนลง" aria-label="เลื่อนลง">↓</button><input class="t" placeholder="ชื่องานย่อย" value="${esc(s.title)}"><select class="ss" title="สถานะ">${Object.keys(ST).map(k=>`<option value="${k}"${k==(s.status||'ok')?' selected':''}>${ST[k]}</option>`).join('')}</select><button type="button" class="del sm" data-del aria-label="ลบงานย่อย" title="ลบงานย่อย">🗑</button></div><div class="srR2"><label class="tcb" style="display:${none0?'inline-flex':'none'};align-items:center;gap:4px;font-size:11px;color:var(--mut)"><input type="checkbox" class="tc" style="width:auto;margin:0"${none0&&s.start?' checked':''}>ชั่วคราว</label><input class="s" type="date" title="วันเริ่ม" value="${s.start||iso(d0)}"><input class="e" type="date" title="วันสิ้นสุด" value="${s.end||iso(d0+6)}"><span class="dpw"><select class="dpt" title="ประเภทการเชื่อมโยง">${DT.map(k=>`<option value="${k}">${k} · ${DTN[k]}</option>`).join('')}</select><select class="dpp" title="เชื่อมกับงานไหน"><option value="">🔗 ไม่เชื่อมโยง</option></select><span class="dplw">เว้น<input class="dpl" type="number" step="1" value="0" title="Lag: จำนวนวันที่เว้น (ใส่ค่าติดลบได้ = เหลื่อมเข้ามา)">วัน</span></span></div><input class="nt" placeholder="โน้ตของงานย่อย (ไม่บังคับ)" value="${esc(s.notes||'')}"><span class="tglb">แท็ก:</span>`;
+  r.innerHTML=`<div class="srR1"><button type="button" class="ghost sm srt" aria-expanded="true" title="พับ/ขยายงานย่อยนี้" aria-label="พับหรือขยายงานย่อยนี้">▾</button><b class="srn"></b><button type="button" class="ghost sm" data-mv="-1" title="เลื่อนขึ้น" aria-label="เลื่อนขึ้น">↑</button><button type="button" class="ghost sm" data-mv="1" title="เลื่อนลง" aria-label="เลื่อนลง">↓</button><input class="t" placeholder="ชื่องานย่อย" value="${esc(s.title)}"><select class="ss" title="สถานะ">${Object.keys(ST).map(k=>`<option value="${k}"${k==(s.status||'ok')?' selected':''}>${ST[k]}</option>`).join('')}</select><button type="button" class="del sm" data-del aria-label="ลบงานย่อย" title="ลบงานย่อย">🗑</button></div><div class="srsum"></div><div class="srR2"><label class="tcb" style="display:${none0?'inline-flex':'none'};align-items:center;gap:4px;font-size:11px;color:var(--mut)"><input type="checkbox" class="tc" style="width:auto;margin:0"${none0&&s.start?' checked':''}>ชั่วคราว</label><input class="s" type="date" title="วันเริ่ม" value="${s.start||iso(d0)}"><input class="e" type="date" title="วันสิ้นสุด" value="${s.end||iso(d0+6)}"><span class="dpw"><select class="dpt" title="ประเภทการเชื่อมโยง">${DT.map(k=>`<option value="${k}">${k} · ${DTN[k]}</option>`).join('')}</select><select class="dpp" title="เชื่อมกับงานไหน"><option value="">🔗 ไม่เชื่อมโยง</option></select><span class="dplw">เว้น<input class="dpl" type="number" step="1" value="0" title="Lag: จำนวนวันที่เว้น (ใส่ค่าติดลบได้ = เหลื่อมเข้ามา)">วัน</span></span></div><input class="nt" placeholder="โน้ตของงานย่อย (ไม่บังคับ)" value="${esc(s.notes||'')}"><span class="tglb">แท็ก:</span>`;
   const k=mkpk(s.owners||[]);r.appendChild(k.el);r._pk=k;r._h=s.hidden;r._sid=s.sid||'';r._k=s.sid||('k'+(++fsK));
   const tk=pick(s.tags||[],()=>tags,'ยังไม่มีแท็ก เพิ่มได้จากปุ่ม “🏷️ แท็ก” บนแถบเครื่องมือ');r.appendChild(tk.el);r._tk=tk;
-  r.querySelector('.ss').onchange=e=>{const none=e.target.value=='none',cb=r.querySelector('.tc');r.querySelector('.tcb').style.display=none?'inline-flex':'none';if(!none)cb.checked=false;depRecalc()};
+  r.querySelector('.ss').onchange=e=>{const none=e.target.value=='none',cb=r.querySelector('.tc');r.querySelector('.tcb').style.display=none?'inline-flex':'none';if(!none)cb.checked=false;srSc(r);srSum(r);depRecalc()};
   depInitCtl(r,()=>rowKey(r),depsRaw(s));
-  r.querySelector('.t').addEventListener('input',()=>depRefresh());
+  r.querySelector('.t').addEventListener('input',()=>depRefresh());srSc(r);r.querySelector('.srt').onclick=()=>srCol(r);
   r.querySelector('.s').addEventListener('input',()=>{lagSync(rowKey(r));depRecalc()});
   r.querySelector('.e').addEventListener('input',()=>{lagSync(rowKey(r));depRecalc()});
-  r.querySelector('[data-del]').onclick=async()=>{const ti=r.querySelector('.t').value.trim();if(ti&&!(await askConfirm('ลบงานย่อย "'+ti+'"?')))return;r.remove();sy();depRefresh();depRecalc()};
-  r.querySelectorAll('[data-mv]').forEach(b=>b.onclick=()=>{const d=+b.dataset.mv,sib=d<0?r.previousElementSibling:r.nextElementSibling;if(sib)sib.parentNode.insertBefore(d<0?r:sib,d<0?sib:r);depRefresh()});
-  q('#subs').appendChild(r);sy();depRefresh()};
+  r.querySelector('[data-del]').onclick=async()=>{const ti=r.querySelector('.t').value.trim();if(ti&&!(await askConfirm('ลบงานย่อย "'+ti+'"?')))return;r.remove();sy();srNum();depRefresh();depRecalc()};
+  r.querySelectorAll('[data-mv]').forEach(b=>b.onclick=()=>{const d=+b.dataset.mv,sib=d<0?r.previousElementSibling:r.nextElementSibling;if(sib)sib.parentNode.insertBefore(d<0?r:sib,d<0?sib:r);srNum();depRefresh()});
+  q('#subs').appendChild(r);sy();srNum();depRefresh()};
+ const srSc=r=>r.style.setProperty('--sc','var(--s-'+r.querySelector('.ss').value+')'),
+  srNum=()=>fRows().forEach((r,i)=>{r.querySelector('.srn').textContent=i+1}),
+  srSum=r=>{const ss=r.querySelector('.ss').value,none=ss=='none'&&!r.querySelector('.tc').checked,sv=r.querySelector('.s').value,ev=r.querySelector('.e').value,ow=r._pk.get();r.querySelector('.srsum').textContent=[none?'ยังไม่กำหนดวัน':(sv&&ev?fr(sv,ev):''),ow.length?ow.join(', '):'ยังไม่ระบุผู้รับผิดชอบ',ST[ss]].filter(Boolean).join(' · ')},
+  srSet=(r,on)=>{r.classList.toggle('col',on);const b=r.querySelector('.srt');b.textContent=on?'▸':'▾';b.setAttribute('aria-expanded',!on);if(on)srSum(r)},
+  srCol=r=>srSet(r,!r.classList.contains('col'));
  const FK='F:',MAINK='F:main',fRows=()=>[...q('#subs').children],rowKey=r=>FK+r._k;
  const dvOf=dep=>!dep?'':(dep.tid&&dep.tid!=id)?(dep.sid?dep.tid+':'+dep.sid:dep.tid):(dep.sid?'SID:'+dep.sid:'');
  const ctlOf=key=>key==MAINK?q('#mdepw'):fRows().find(r=>rowKey(r)==key);
@@ -1029,7 +1087,8 @@ function edit(id,focusSub,fx){
    if(fm=='s'){fr0.classList.add('cur');h2.innerHTML='<small>'+esc(t.title)+' ›</small><br>แก้ไขงานย่อย'}
    else h2.insertAdjacentHTML('afterend','<p class="hint fxn">แก้ไขเฉพาะงานหลัก · มีงานย่อย '+(t.subs||[]).length+' งานซ่อนอยู่ (กด “แก้ไขทั้งงาน” เพื่อดู/แก้งานย่อย)</p>');
    fxb.onclick=()=>{md.classList.remove('fxs','fxm');md.querySelectorAll('.fxn').forEach(e=>e.remove());h2.innerHTML=h2o;fxb.style.display='none';if(fr0)fr0.classList.remove('cur');md.scrollTop=0}}}
- q('#as').onclick=()=>addSub({});
+ q('#as').onclick=()=>{addSub({});const nr=fRows().pop();if(nr){nr.querySelector('.t').focus();try{nr.scrollIntoView({block:'nearest',behavior:'smooth'})}catch(_){}}};
+ q('#srtools').onclick=e=>{const b=e.target.closest('[data-sr]');if(!b)return;fRows().forEach(r=>srSet(r,b.dataset.sr=='col'))};
  if(q('#dl'))q('#dl').onclick=async()=>{if(await askConfirm('ลบงานนี้และงานย่อยทั้งหมด? (งานจะถูกย้ายไปถังขยะ กู้คืนได้ภายใน 30 วัน)')){await del(id);m.remove()}};
  q('#sv').onclick=async()=>{
   const title=q('#ft').value.trim();if(!title)return toast('กรุณากรอกชื่องาน');
@@ -1132,6 +1191,7 @@ $('#mgBtn').onclick=e=>{e.stopPropagation();document.querySelectorAll('.fbwrap.o
 $('#mgPop').addEventListener('click',()=>$('#mgWrap').classList.remove('open'));
 $('#mobMenu').onclick=()=>{document.body.classList.toggle('fbOpen')};
 $('#trBtn').onclick=trashUI;
+$('#fltDone').onclick=()=>$('#fltWrap').classList.remove('open');
 $('#fltClr').onclick=()=>{pfs.clear();tf.clear();sf.clear();render()};
 $('#fltPop').addEventListener('change',e=>{const c=e.target.closest('input[data-fk]');if(!c)return;const S=c.dataset.fk=='p'?pfs:tf,v=c.dataset.v;if(c.checked)S.add(v);else S.delete(v);render()});
 $('#fltPop').addEventListener('click',e=>{const h=e.target.closest('.fxh');if(h){const k=h.dataset.fx;fxOpen[k]=!fxOpen[k];fltRender();if(fxOpen[k]){const qi=h.closest('.fx').querySelector('.fxq');if(qi&&qi.style.display!='none')qi.focus()}return}const c=e.target.closest('.fxc');if(c){(c.dataset.fc=='p'?pfs:tf).clear();render()}});
