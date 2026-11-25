@@ -309,6 +309,8 @@ svg.fsl{position:absolute;left:0;top:0;pointer-events:none;z-index:0;overflow:vi
 #fltPop .fxe{grid-column:1/-1}
 @media(max-width:600px){#fltPop{position:fixed!important;left:8px!important;right:8px!important;top:auto!important;bottom:8px!important;width:auto!important;max-height:80vh!important}}
 #fltPop .fdone{position:sticky;bottom:-12px;z-index:5;margin:0 -12px -12px;width:calc(100% + 24px);border-radius:0 0 14px 14px;padding:11px;box-shadow:0 -10px 12px -6px var(--pn)}
+.sr .srn{flex:0 0 auto;width:40px;min-width:0;height:26px;padding:0 2px;border:0;border-radius:99px;display:inline-block;text-align:center;font-size:13px;font-weight:700;line-height:26px;background:var(--sc);color:#fff;margin:0;-moz-appearance:textfield;appearance:textfield}.sr .srn::-webkit-outer-spin-button,.sr .srn::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}.sr .srn:focus{outline:2px solid var(--ac);outline-offset:2px}.sr .srn:hover{filter:brightness(1.1);cursor:text}
+#fltPop .fxmode{display:flex;border:1px solid var(--ln);border-radius:99px;overflow:hidden;margin-bottom:6px}#fltPop .fxmode button{flex:1;border:0;border-radius:0;margin:0;padding:6px 8px;font-size:12px;background:var(--bg);color:var(--fg);white-space:normal}#fltPop .fxmode button.on{background:var(--ac);color:var(--pn);font-weight:600}#fltPop .fxhint{font-size:11px;color:var(--mut);margin:0 4px 8px}
 .ceb.on{border-color:var(--ac);color:var(--ac)}
 .md.fxs [data-g="m"],.md.fxm [data-g="s"]{display:none!important}.md.fxs [data-g="s"]:not(#subs):not(.dephelp){display:none!important}.md.fxs #subs>.sr:not(.cur){display:none!important}.md.fxs .sr.cur [data-mv],.md.fxs #dl{display:none}.fxn{margin:-4px 0 10px}
 .sr.flash{animation:srflash 1.8s ease}@keyframes srflash{0%,65%{background:color-mix(in srgb,var(--ac) 20%,transparent);box-shadow:0 0 0 2px var(--ac)}100%{background:transparent;box-shadow:0 0 0 0 transparent}}
@@ -340,7 +342,7 @@ svg.fsl{position:absolute;left:0;top:0;pointer-events:none;z-index:0;overflow:vi
  <div class="fbwrap" id="fltWrap"><button class="fbbtn" id="fltBtn">🔎 ตัวกรอง ▾</button><div class="fbpop" id="fltPop">
  <div class="fhd"><span class="fht">🔎 ตัวกรอง</span><button type="button" id="fltClr" class="flink">ล้างทั้งหมด</button></div>
   <div id="pfWrap" class="fx"><button type="button" class="fxh" data-fx="p" aria-expanded="false"><span class="fxb0">👤</span><span class="fxt">ชื่อคน</span><span class="fxs"></span><span class="fxa">▾</span></button><div class="fxb"><div class="fxtools"><input class="fxq" data-fq="p" placeholder="🔍 ค้นหาชื่อ…" autocomplete="off"><button type="button" class="fxc" data-fc="p">ล้าง</button></div><div class="fxl" id="pfPop"></div></div></div>
-  <div id="tfWrap" class="fx"><button type="button" class="fxh" data-fx="t" aria-expanded="false"><span class="fxb0">🏷️</span><span class="fxt">แท็ก</span><span class="fxs"></span><span class="fxa">▾</span></button><div class="fxb"><div class="fxtools"><input class="fxq" data-fq="t" placeholder="🔍 ค้นหาแท็ก…" autocomplete="off"><button type="button" class="fxc" data-fc="t">ล้าง</button></div><div class="fxl" id="tfPop"></div></div></div>
+  <div id="tfWrap" class="fx"><button type="button" class="fxh" data-fx="t" aria-expanded="false"><span class="fxb0">🏷️</span><span class="fxt">แท็ก</span><span class="fxs"></span><span class="fxa">▾</span></button><div class="fxb"><div class="fxmode" role="group" aria-label="โหมดกรองแท็ก"><button type="button" data-tfm="any">มีแท็กใดแท็กหนึ่ง</button><button type="button" data-tfm="all">ต้องมีครบทุกแท็ก</button></div><div class="fxhint" id="tfHint"></div><div class="fxtools"><input class="fxq" data-fq="t" placeholder="🔍 ค้นหาแท็ก…" autocomplete="off"><button type="button" class="fxc" data-fc="t">ล้าง</button></div><div class="fxl" id="tfPop"></div></div></div>
   <div id="sfWrap"><div class="mh">📌 สถานะ <span class="mut">(เลือกได้หลายอัน)</span></div><div class="fsec" id="sfPop"></div></div>
   <button type="button" id="fltDone" class="pri fdone">เสร็จสิ้น</button>
  </div></div>
@@ -403,13 +405,13 @@ const ST={ok:'อยู่ในกำหนด',active:'Active',done:'งาน
  badge=x=>(!x._occ&&isRep(x)&&repSt(x)=='late')?`<span class="bg auto" style="color:var(--s-late)" title="มีรอบที่ผ่านไปแล้วแต่ยังไม่ได้ติ๊กว่าทำแล้ว">⚠ ขาด ${occMissed(x).length} รอบ</span>`:autoLate(x)?`<span class="bg auto" style="color:var(--s-late)" title="เลยวันสิ้นสุดแล้วแต่ยังไม่ได้ตั้งเป็น “เสร็จแล้ว” (ระบบแสดงให้อัตโนมัติ ข้อมูลที่บันทึกไว้ยังเป็น “${ST[rawSt(x)]}”)">⚠ เลยกำหนด</span>`:`<span class="bg" style="color:var(--s-${st(x)})">${ST[st(x)]}</span>`;
 try{const v=sessionStorage.getItem('v');if(ALLV.includes(v))view=v}catch(e){}
 try{const tv=sessionStorage.getItem('theme');if(['light','dark','auto'].includes(tv))theme=tv}catch(e){}
-const PK='teamboard.prefs.v1';let clickEdit=true,fxOpen={p:false,t:false},fxQ={p:'',t:''},fltP=[];const pfOk=a=>!pfs.size||(a||[]).some(n=>pfs.has(n));
+const PK='teamboard.prefs.v1';let clickEdit=true,fxOpen={p:false,t:false},fxQ={p:'',t:''},fltP=[],tfAll=false;const pfOk=a=>!pfs.size||(a||[]).some(n=>pfs.has(n)),tagMatch=(a,b)=>{if(!tf.size)return true;const A=a||[],B=b||[],h=x=>A.includes(x)||B.includes(x);return tfAll?[...tf].every(h):[...tf].some(h)};
 try{const P0=JSON.parse(localStorage.getItem(PK)||'null');if(P0&&typeof P0=='object'){
  if(ALLV.includes(P0.view))view=P0.view;if(['task','person'].includes(P0.mode))mode=P0.mode;if(['light','dark','auto'].includes(P0.theme))theme=P0.theme;
- if(Array.isArray(P0.pfs))pfs=new Set(P0.pfs.filter(x=>typeof x=='string'));else if(typeof P0.pf=='string'&&P0.pf)pfs=new Set([P0.pf]);if(typeof P0.mt=='string')mt=P0.mt;if(Array.isArray(P0.tf))tf=new Set(P0.tf);if(Array.isArray(P0.sf))sf=new Set(P0.sf.filter(k=>k in ST));
+ if(Array.isArray(P0.pfs))pfs=new Set(P0.pfs.filter(x=>typeof x=='string'));else if(typeof P0.pf=='string'&&P0.pf)pfs=new Set([P0.pf]);if(typeof P0.mt=='string')mt=P0.mt;if(Array.isArray(P0.tf))tf=new Set(P0.tf);if(typeof P0.tfa=='boolean')tfAll=P0.tfa;if(Array.isArray(P0.sf))sf=new Set(P0.sf.filter(k=>k in ST));
  if(Array.isArray(P0.col))col=new Set(P0.col);if(typeof P0.showH=='boolean')showH=P0.showH;if(Array.isArray(P0.calSel))calSel=new Set(P0.calSel.slice(0,1));if(typeof P0.calLong=='boolean')calLong=P0.calLong;if(typeof P0.ce=='boolean')clickEdit=P0.ce}}catch(e){}
 let prefsReady=false,lastPrefs='';
-function savePrefs(){if(!prefsReady)return;try{const v=JSON.stringify({view,mode,theme,pfs:[...pfs],mt,tf:[...tf],sf:[...sf],col:[...col],showH,calSel:[...calSel],calLong,ce:clickEdit});if(v!==lastPrefs){lastPrefs=v;localStorage.setItem(PK,v)}}catch(e){}}
+function savePrefs(){if(!prefsReady)return;try{const v=JSON.stringify({view,mode,theme,pfs:[...pfs],mt,tf:[...tf],tfa:tfAll,sf:[...sf],col:[...col],showH,calSel:[...calSel],calLong,ce:clickEdit});if(v!==lastPrefs){lastPrefs=v;localStorage.setItem(PK,v)}}catch(e){}}
 // ---- recurring occurrences ----
 const RI=t=>t&&t.repeat=='weekly'?'🔁':'📅';
 const ownOf=(x,t)=>(x&&x.owners)||[]; const eoF=(t,s)=>(s&&s.owners&&s.owners.length)?s.owners:((t&&t.owners)||[]);
@@ -508,7 +510,7 @@ const pgb=(d,tot)=>{const pc=tot?Math.round(d/tot*100):0;return`<span class="pgb
  const sumBar=(t,h,V)=>{const ds=V.map(([s])=>s).filter(y=>y.start);if(!ds.length)return'';let a=ds[0].start,z=ds[0].end;ds.forEach(y=>{if(y.start<a)a=y.start;if(y.end>z)z=y.end});
   const s=n(a),e=n(z)+1;if(e<=ws||s>=we)return'';const cs=Math.max(s,ws),ce=Math.min(e,we),l=(cs-ws)*p,w=Math.max((ce-cs)*p,6),S=t.subs||[],dn=S.filter(y=>st(y)=='done').length,pc=S.length?Math.round(dn/S.length*100):0,c1=swatchColors(h,true),c0=swatchColors(h,false);
   return`<div class="bar sum" data-id="${t.id}" data-virt="1" title="${esc(t.title)} · ${fr(a,z)} · เสร็จ ${dn}/${S.length} (${pc}%)" style="left:${l}px;width:${w}px;--ex:0px"><span class="sumbg" style="background:${c1.bg}"></span><span class="sumf" style="width:${pc}%;background:${c0.bg}"></span>${e<=we?`<span class="dl sumt">${pc}% · ${dn}/${S.length}</span>`:''}</div>`};
-const lc=(t,x,i,grp,h)=>{const bkey=i!=null?t.id+'::'+i:t.id;return`<div class="lc" data-id="${t.id}"${i!=null?` data-s="${i}"`:''}${h!=null?` style="border-left-color:${swatchColors(h,false).bg}"`:''}>${canW?`<button class="ed" data-e="${t.id}" aria-label="แก้ไข" title="แก้ไข">✎</button><button class="ed hi" data-x="${t.id}"${i!=null?` data-s="${i}"`:''} title="ไม่แสดงในปฏิทิน">${x.hidden?'เลิกซ่อน':'ซ่อน'}</button>`:''}<b>${grp==1?`<span class="cr" data-c="${t.id}">${col.has(t.id)?'▸':'▾'}</span>`:''}${esc(x.title)}</b>${grp?`<span class="dt">${subRange(t)}</span><span class="dt">${t.subs.length} งานย่อย · เสร็จแล้ว ${t.subs.filter(y=>st(y)=='done').length}</span>`:i!=null?badge(x)+fsInfo(t,x):`<span class="dt">${x.start&&st(x)!='none'?fr(x.start,x.end):''}${x.repeat=='monthly'?' · 📅 ทุกเดือน':x.repeat=='weekly'?' · 🔁 ทุกสัปดาห์':''}</span>${i==null?fsInfo(t,x):''}${i==null&&isRep(x)?(([d,tot])=>tot?`<span class="dt">ทำแล้ว ${d}/${tot} รอบ</span>`:'')(repProg(x)):''}${badge(x)}`}${chips(x.owners)}</div>`};
+const lc=(t,x,i,grp,h)=>{const bkey=i!=null?t.id+'::'+i:t.id;return`<div class="lc" data-id="${t.id}"${i!=null?` data-s="${i}"`:''}${h!=null?` style="border-left-color:${swatchColors(h,false).bg}"`:''}>${canW?`<button class="ed" data-e="${t.id}" aria-label="แก้ไข" title="แก้ไข">✎</button><button class="ed hi" data-x="${t.id}"${i!=null?` data-s="${i}"`:''} title="ไม่แสดงในปฏิทิน">${x.hidden?'เลิกซ่อน':'ซ่อน'}</button>`:''}<b>${grp==1?`<span class="cr" data-c="${t.id}">${col.has(t.id)?'▸':'▾'}</span>`:''}${esc(x.title)}</b>${grp?`<span class="dt">${subRange(t)}</span><span class="dt">${t.subs.length} งานย่อย · เสร็จแล้ว ${t.subs.filter(y=>st(y)=='done').length}</span>`:i!=null?badge(x):`<span class="dt">${x.start&&st(x)!='none'?fr(x.start,x.end):''}${x.repeat=='monthly'?' · 📅 ทุกเดือน':x.repeat=='weekly'?' · 🔁 ทุกสัปดาห์':''}</span>${i==null&&isRep(x)?(([d,tot])=>tot?`<span class="dt">ทำแล้ว ${d}/${tot} รอบ</span>`:'')(repProg(x)):''}${badge(x)}`}${chips(x.owners)}</div>`};
  const tc=(c,hh)=>`<div class="tc" style="width:${W}px${hh?`;height:${hh}px`:''}">${c}</div>`;
  const lanes=V=>{const L=[],items=[];V.filter(([s])=>s.start).sort((a,b)=>a[0].start.localeCompare(b[0].start)).forEach(([s,i])=>{const a=(n(s.start)-ws)*p,w=(n(s.end)+1-n(s.start))*p,ex=Math.max(0,cv.measureText(s.title).width+24-w);let k=L.findIndex(e=>e<=a-56);if(k<0){k=L.length;L.push(0)}L[k]=a+w+ex+56;items.push([s,i,k])});return{items,n:Math.max(1,L.length)}};
  const key=t=>(t.subs&&t.subs.length?t.subs.map(s=>s.start).filter(Boolean).sort()[0]:t.start)||'9999';
@@ -516,7 +518,7 @@ const lc=(t,x,i,grp,h)=>{const bkey=i!=null?t.id+'::'+i:t.id;return`<div class="
  if(pfs.size&&(tasks.length||people.length)){[...pfs].forEach(x=>{if(!P.includes(x))pfs.delete(x)})}
  if(mt&&tasks.length&&!tasks.some(t=>t.id==mt))mt='';
  const mine=pfOk;
- const tagOk=(a,b)=>!tf.size||(a||[]).some(x=>tf.has(x))||(b||[]).some(x=>tf.has(x));
+ const tagOk=tagMatch;
  const qOk=ti=>!sq||String(ti||'').toLowerCase().includes(sq);
  const statusOk=x=>!sf.size||sf.has(st(x));
  let rows='';
@@ -529,8 +531,11 @@ const lc=(t,x,i,grp,h)=>{const bkey=i!=null?t.id+'::'+i:t.id;return`<div class="
   if(!it.length)return;
   const pc=PCOLORS[name],ptx=pc?textForHex(pc):null;
   rows+=`<div class="row who"${pc?` style="background:${pc}26"`:''}><div class="lc"${pc?` style="background:${pc};border-left-color:${pc}"`:''}><b${pc?` style="color:${ptx}"`:''}>${esc(name)}</b><span class="dt"${pc?` style="color:${ptx};opacity:.85"`:''}>${it.length} งาน</span></div>${tc('')}</div>`;
-  it.forEach(([t,V])=>{const h=colorOf(t),hc=t.hidden?' hid':'',ln=V?lanes(V):null;
-   rows+=`<div class="row sub${hc}">${lc(t,t,null,V?2:0,h)}${tc(V?ln.items.map(([s,i,k])=>bar(s,h,1,t.id,i,k)).join(''):taskBars(t,h),V?12+ln.n*28:0)}</div>`})})};
+  it.forEach(([t,V])=>{const h=colorOf(t),hc=t.hidden?' hid':'';
+    if(V){if(!VIS.includes(t.id))VIS.push(t.id);const cp=col.has(t.id),ln=cp?lanes(V):null;
+     rows+=`<div class="row grp${hc}">${lc(t,t,null,1,h)}${tc(cp?ln.items.map(([s,i,k])=>bar(s,h,1,t.id,i,k)).join(''):'',cp?12+ln.n*28:0)}</div>`;
+     if(!cp)fsOrder(V,t.subs).forEach(([s,i])=>rows+=`<div class="row sub${hc||(s.hidden?' hid':'')}">${lc(t,s,i,undefined,h)}${tc(bar(s,h,1,t.id,i))}</div>`)}
+    else rows+=`<div class="row sub${hc}">${lc(t,t,null,0,h)}${tc(taskBars(t,h),0)}</div>`})})};
  if(mode=='person')personRows();else sortT().forEach(t=>{
   if(mt&&t.id!=mt)return;
   const h=colorOf(t),S=t.subs||[];
@@ -624,7 +629,7 @@ function listHTML(L){if(!L.length)return`<div class="emp">ไม่มีงา�
  const f=kf[lsK]||kf.end;R2.sort((a,b)=>{const x=f(a),y=f(b);return(typeof x=='number'?x-y:String(x).localeCompare(String(y),'th'))*lsD});
  const th=(k,t,c)=>`<th data-lsk="${k}" class="${lsK==k?'on':''}${c?' '+c:''}">${t}${lsK==k?(lsD>0?' ▲':' ▼'):''}</th>`;
  return`<div class="lsw"><table class="lst"><thead><tr>${th('title','งาน')}${th('own','ผู้รับผิดชอบ')}${th('start','เริ่ม','lsS')}${th('end','ครบกำหนด')}${th('left','เหลือ')}${th('st','สถานะ')}</tr></thead><tbody>${R2.map(r=>{const o=r.o,c=swatchColors(o.h,false);
-  return`<tr class="lr" data-id="${o.t.id}"${o.i!=null?` data-s="${o.i}"`:''}><td style="border-left:5px solid ${c.bg}">${o.i!=null?`<small>${esc(o.t.title)} ›</small>`:''}<b>${r.d.rep?RI(o.x)+' ':''}${esc(o.x.title)}</b>${fsInfo(o.t,o.x)}</td><td>${chips(o.x.owners)||'<span class="mut">—</span>'}</td><td class="lsS">${r.d.s?dd(r.d.s):'—'}</td><td>${r.d.e?dd(r.d.e):'—'}${r.d.rep?'<small>รอบถัดไป</small>':''}</td><td>${dueTxt(o,r.stt)||'<span class="mut">—</span>'}</td><td>${badge(o.x)}</td></tr>`}).join('')}</tbody></table><p class="kbhint">ทั้งหมด ${L.length} รายการ · กดหัวคอลัมน์เพื่อเรียง · กดแถวเพื่อดูรายละเอียด</p></div>`}
+  return`<tr class="lr" data-id="${o.t.id}"${o.i!=null?` data-s="${o.i}"`:''}><td style="border-left:5px solid ${c.bg}">${o.i!=null?`<small>${esc(o.t.title)} ›</small>`:''}<b>${r.d.rep?RI(o.x)+' ':''}${esc(o.x.title)}</b></td><td>${chips(o.x.owners)||'<span class="mut">—</span>'}</td><td class="lsS">${r.d.s?dd(r.d.s):'—'}</td><td>${r.d.e?dd(r.d.e):'—'}${r.d.rep?'<small>รอบถัดไป</small>':''}</td><td>${dueTxt(o,r.stt)||'<span class="mut">—</span>'}</td><td>${badge(o.x)}</td></tr>`}).join('')}</tbody></table><p class="kbhint">ทั้งหมด ${L.length} รายการ · กดหัวคอลัมน์เพื่อเรียง · กดแถวเพื่อดูรายละเอียด</p></div>`}
 function dashHTML(L){if(!L.length)return`<div class="emp">ไม่มีงานที่แสดง</div>`;
  const td=tdN(),C={};KBC.forEach(k=>C[k]=0);L.forEach(o=>C[st(o.x)]++);const tot=L.length,pc=Math.round(C.done/tot*100);
  const tile=(k,lab,v,sub)=>`<div class="dtile"${k?` style="--sc:var(--s-${k})"`:''}><small>${k?'<i></i>':''}${lab}</small><b>${v}</b>${sub||''}</div>`;
@@ -922,15 +927,16 @@ function fltRender(){
   const w=el.closest('.fx'),hd=w.querySelector('.fxh'),sm=hd.querySelector('.fxs');hd.classList.toggle('act',set.size>0);
   if(!set.size)sm.innerHTML='<span class="mut">'+(isP?'ทุกคน':'ทั้งหมด')+'</span>';
   else if(isP)sm.innerHTML='<span class="minis">'+[...set].slice(0,4).map(x=>`<i style="--c:${pcol(x)};--t:${textForHex(pcol(x))}">${esc(ini(x))}</i>`).join('')+'</span><span class="pill">'+set.size+'</span>';
-  else sm.innerHTML='<span class="sx">'+esc([...set].slice(0,2).join(', '))+(set.size>2?' …':'')+'</span><span class="pill">'+set.size+'</span>';
+  else sm.innerHTML='<span class="sx">'+(tfAll&&set.size>1?'ครบ: ':'')+esc([...set].slice(0,2).join(', '))+(set.size>2?' …':'')+'</span><span class="pill">'+set.size+'</span>';
   w.classList.toggle('open',!!fxOpen[k]);hd.setAttribute('aria-expanded',!!fxOpen[k]);
   w.querySelector('.fxc').style.visibility=set.size?'':'hidden';w.querySelector('.fxq').style.display=items.length>6?'':'none'};
  one('p',fltP,pfs,true);one('t',tags,tf,false);
+ document.querySelectorAll('#fltPop [data-tfm]').forEach(b=>b.classList.toggle('on',(b.dataset.tfm=='all')==tfAll));const th=$('#tfHint');if(th)th.textContent=tfAll?'แสดงเฉพาะงานที่มีครบทุกแท็กที่เลือก (เช่น เลือก 3 แท็ก ต้องมีทั้ง 3)':'แสดงงานที่มีแท็กอย่างน้อย 1 อันจากที่เลือก';
  if(fk){const el=[...document.querySelectorAll('#fltPop input[data-fk]')].find(x=>x.dataset.fk+'|'+x.dataset.v==fk);if(el)el.focus()}}
 function fltChips(){const c=$('#fchips');if(!c)return;const ch=[];
  [...pfs].forEach(x=>ch.push(['p',x,'👤 '+x,PCOLORS[x]]));[...tf].forEach(x=>ch.push(['t',x,'🏷️ '+x]));[...sf].forEach(k=>ch.push(['s',k,'📌 '+ST[k]]));
  if(!ch.length){c.style.display='none';c.innerHTML='';return}
- c.style.display='';c.innerHTML='<span class="mut">กำลังกรอง:</span>'+ch.map(([k,v,l,col])=>`<button type="button" class="fchip" data-chip="${k}" data-v="${esc(v)}" title="เอาตัวกรองนี้ออก"${col?` style="--c:${col}"`:''}>${esc(l)} <b>✕</b></button>`).join('')+(ch.length>1?'<button type="button" class="fchip fcall" data-chip="all">ล้างทั้งหมด</button>':'')}
+ c.style.display='';c.innerHTML='<span class="mut">กำลังกรอง:</span>'+ch.map(([k,v,l,col])=>`<button type="button" class="fchip" data-chip="${k}" data-v="${esc(v)}" title="เอาตัวกรองนี้ออก"${col?` style="--c:${col}"`:''}>${esc(l)} <b>✕</b></button>`).join('')+(tfAll&&tf.size>1?'<span class="mut" title="โหมดกรองแท็ก">(แท็กต้องครบทุกอัน)</span>':'')+(ch.length>1?'<button type="button" class="fchip fcall" data-chip="all">ล้างทั้งหมด</button>':'')}
 function toast(msg){
  let tw=document.getElementById('tw');
  if(!tw){tw=document.createElement('div');tw.id='tw';tw.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:50;display:flex;flex-direction:column;gap:6px;align-items:center;pointer-events:none';document.body.appendChild(tw)}
@@ -1005,19 +1011,20 @@ function edit(id,focusSub,fx){
  q('#ntgt').onclick=()=>{q('#ntgt').style.display='none';q('#ntgw').style.display='';q('#ntg').focus()};q('#ntgb').onclick=addTag;q('#ntg').onkeydown=e=>{if(e.key=='Enter'){e.preventDefault();addTag()}};
  const addSub=s=>{const r=document.createElement('div');r.className='sr';
   const none0=(s.status||'ok')=='none';
-  r.innerHTML=`<div class="srR1"><button type="button" class="ghost sm srt" aria-expanded="true" title="พับ/ขยายงานย่อยนี้" aria-label="พับหรือขยายงานย่อยนี้">▾</button><b class="srn"></b><button type="button" class="ghost sm" data-mv="-1" title="เลื่อนขึ้น" aria-label="เลื่อนขึ้น">↑</button><button type="button" class="ghost sm" data-mv="1" title="เลื่อนลง" aria-label="เลื่อนลง">↓</button><input class="t" placeholder="ชื่องานย่อย" value="${esc(s.title)}"><select class="ss" title="สถานะ">${Object.keys(ST).map(k=>`<option value="${k}"${k==(s.status||'ok')?' selected':''}>${ST[k]}</option>`).join('')}</select><button type="button" class="del sm" data-del aria-label="ลบงานย่อย" title="ลบงานย่อย">🗑</button></div><div class="srsum"></div><div class="srR2"><label class="tcb" style="display:${none0?'inline-flex':'none'};align-items:center;gap:4px;font-size:11px;color:var(--mut)"><input type="checkbox" class="tc" style="width:auto;margin:0"${none0&&s.start?' checked':''}>ชั่วคราว</label><input class="s" type="date" title="วันเริ่ม" value="${s.start||iso(d0)}"><input class="e" type="date" title="วันสิ้นสุด" value="${s.end||iso(d0+6)}"><span class="dpw"><select class="dpt" title="ประเภทการเชื่อมโยง">${DT.map(k=>`<option value="${k}">${k} · ${DTN[k]}</option>`).join('')}</select><select class="dpp" title="เชื่อมกับงานไหน"><option value="">🔗 ไม่เชื่อมโยง</option></select><span class="dplw">เว้น<input class="dpl" type="number" step="1" value="0" title="Lag: จำนวนวันที่เว้น (ใส่ค่าติดลบได้ = เหลื่อมเข้ามา)">วัน</span></span></div><input class="nt" placeholder="โน้ตของงานย่อย (ไม่บังคับ)" value="${esc(s.notes||'')}"><span class="tglb">แท็ก:</span>`;
+  r.innerHTML=`<div class="srR1"><button type="button" class="ghost sm srt" aria-expanded="true" title="พับ/ขยายงานย่อยนี้" aria-label="พับหรือขยายงานย่อยนี้">▾</button><input type="number" class="srn" min="1" step="1" aria-label="ลำดับงานย่อย" title="พิมพ์เลขลำดับเพื่อย้ายงานย่อยนี้ไปตำแหน่งนั้นทันที"><button type="button" class="ghost sm" data-mv="-1" title="เลื่อนขึ้น" aria-label="เลื่อนขึ้น">↑</button><button type="button" class="ghost sm" data-mv="1" title="เลื่อนลง" aria-label="เลื่อนลง">↓</button><input class="t" placeholder="ชื่องานย่อย" value="${esc(s.title)}"><select class="ss" title="สถานะ">${Object.keys(ST).map(k=>`<option value="${k}"${k==(s.status||'ok')?' selected':''}>${ST[k]}</option>`).join('')}</select><button type="button" class="del sm" data-del aria-label="ลบงานย่อย" title="ลบงานย่อย">🗑</button></div><div class="srsum"></div><div class="srR2"><label class="tcb" style="display:${none0?'inline-flex':'none'};align-items:center;gap:4px;font-size:11px;color:var(--mut)"><input type="checkbox" class="tc" style="width:auto;margin:0"${none0&&s.start?' checked':''}>ชั่วคราว</label><input class="s" type="date" title="วันเริ่ม" value="${s.start||iso(d0)}"><input class="e" type="date" title="วันสิ้นสุด" value="${s.end||iso(d0+6)}"><span class="dpw"><select class="dpt" title="ประเภทการเชื่อมโยง">${DT.map(k=>`<option value="${k}">${k} · ${DTN[k]}</option>`).join('')}</select><select class="dpp" title="เชื่อมกับงานไหน"><option value="">🔗 ไม่เชื่อมโยง</option></select><span class="dplw">เว้น<input class="dpl" type="number" step="1" value="0" title="Lag: จำนวนวันที่เว้น (ใส่ค่าติดลบได้ = เหลื่อมเข้ามา)">วัน</span></span></div><input class="nt" placeholder="โน้ตของงานย่อย (ไม่บังคับ)" value="${esc(s.notes||'')}"><span class="tglb">แท็ก:</span>`;
   const k=mkpk(s.owners||[]);r.appendChild(k.el);r._pk=k;r._h=s.hidden;r._sid=s.sid||'';r._k=s.sid||('k'+(++fsK));
   const tk=pick(s.tags||[],()=>tags,'ยังไม่มีแท็ก เพิ่มได้จากปุ่ม “🏷️ แท็ก” บนแถบเครื่องมือ');r.appendChild(tk.el);r._tk=tk;
   r.querySelector('.ss').onchange=e=>{const none=e.target.value=='none',cb=r.querySelector('.tc');r.querySelector('.tcb').style.display=none?'inline-flex':'none';if(!none)cb.checked=false;srSc(r);srSum(r);depRecalc()};
   depInitCtl(r,()=>rowKey(r),depsRaw(s));
-  r.querySelector('.t').addEventListener('input',()=>depRefresh());srSc(r);r.querySelector('.srt').onclick=()=>srCol(r);
+  r.querySelector('.t').addEventListener('input',()=>depRefresh());srSc(r);r.querySelector('.srt').onclick=()=>srCol(r);{const ni=r.querySelector('.srn');ni.onchange=()=>srMove(r,ni.value);ni.onkeydown=e=>{if(e.key=='Enter'){e.preventDefault();ni.blur()}};ni.onfocus=()=>ni.select()}
   r.querySelector('.s').addEventListener('input',()=>{lagSync(rowKey(r));depRecalc()});
   r.querySelector('.e').addEventListener('input',()=>{lagSync(rowKey(r));depRecalc()});
   r.querySelector('[data-del]').onclick=async()=>{const ti=r.querySelector('.t').value.trim();if(ti&&!(await askConfirm('ลบงานย่อย "'+ti+'"?')))return;r.remove();sy();srNum();depRefresh();depRecalc()};
   r.querySelectorAll('[data-mv]').forEach(b=>b.onclick=()=>{const d=+b.dataset.mv,sib=d<0?r.previousElementSibling:r.nextElementSibling;if(sib)sib.parentNode.insertBefore(d<0?r:sib,d<0?sib:r);srNum();depRefresh()});
   q('#subs').appendChild(r);sy();srNum();depRefresh()};
  const srSc=r=>r.style.setProperty('--sc','var(--s-'+r.querySelector('.ss').value+')'),
-  srNum=()=>fRows().forEach((r,i)=>{r.querySelector('.srn').textContent=i+1}),
+  srNum=()=>{const R=fRows();R.forEach((r,i)=>{const e=r.querySelector('.srn');e.value=i+1;e.max=R.length})},
+  srMove=(r,v)=>{const R=fRows(),cur=R.indexOf(r)+1,p=Math.max(1,Math.min(R.length,parseInt(v)||cur));if(p!=cur){const rest=R.filter(x=>x!==r);r.parentNode.insertBefore(r,rest[p-1]||null);depRefresh();depRecalc()}srNum();const e=r.querySelector('.srn');try{r.scrollIntoView({block:'nearest'})}catch(_){}e.focus();e.select()},
   srSum=r=>{const ss=r.querySelector('.ss').value,none=ss=='none'&&!r.querySelector('.tc').checked,sv=r.querySelector('.s').value,ev=r.querySelector('.e').value,ow=r._pk.get();r.querySelector('.srsum').textContent=[none?'ยังไม่กำหนดวัน':(sv&&ev?fr(sv,ev):''),ow.length?ow.join(', '):'ยังไม่ระบุผู้รับผิดชอบ',ST[ss]].filter(Boolean).join(' · ')},
   srSet=(r,on)=>{r.classList.toggle('col',on);const b=r.querySelector('.srt');b.textContent=on?'▸':'▾';b.setAttribute('aria-expanded',!on);if(on)srSum(r)},
   srCol=r=>srSet(r,!r.classList.contains('col'));
@@ -1186,6 +1193,12 @@ sc.onclick=e=>{if(Date.now()-sup<100)return;const g=k=>e.target.closest(k);
  const ok=g('[data-ok]');if(ok){occInfo(ok.dataset.id,ok.dataset.ok);return}
  const r=g('[data-id]');if(r)openT(r.dataset.id,r.dataset.s,e)};
 let dg=null,bd=null;
+function ffGroup(key,IX){const adj=new Map(),link=(p,q)=>{if(!adj.has(p))adj.set(p,new Set());adj.get(p).add(q)};
+ IX.N.forEach(nd=>depNormAll(nd.t,nd.y).forEach(dp=>{if((dp.type=='SS'||dp.type=='FF')&&IX.N.has(dp.ref)&&dp.ref!==nd.k){link(nd.k,dp.ref);link(dp.ref,nd.k)}}));
+ const g=new Set([key]),st=[key];while(st.length){const c=st.pop();(adj.get(c)||[]).forEach(o=>{if(!g.has(o)){g.add(o);st.push(o)}})}return g}
+const nodeKey=(t,x,i)=>i!=null&&i!==''?(x.sid?t.id+':'+x.sid:t.id+'#'+i):t.id;
+function ffPrev(d){d.g=[];const IX=depIndex(tasks),key=nodeKey(d.t,d.x,d.i),g=ffGroup(key,IX);if(g.size<2)return;
+ g.forEach(k=>{if(k===key)return;const nd=IX.N.get(k);if(!nd)return;const sel='.bar[data-id="'+nd.t.id+'"]'+(nd.t.subs&&nd.t.subs.length?'[data-s="'+nd.i+'"]':':not([data-s])');sc.querySelectorAll(sel).forEach(el=>d.g.push({el,l0:parseFloat(el.style.left)||0}))})}
 $('#fltBtn').onclick=e=>{e.stopPropagation();document.querySelectorAll('.fbwrap.open').forEach(x=>{if(x.id!='fltWrap')x.classList.remove('open')});$('#fltWrap').classList.toggle('open')};
 $('#mgBtn').onclick=e=>{e.stopPropagation();document.querySelectorAll('.fbwrap.open').forEach(x=>{if(x.id!='mgWrap')x.classList.remove('open')});$('#mgWrap').classList.toggle('open')};
 $('#mgPop').addEventListener('click',()=>$('#mgWrap').classList.remove('open'));
@@ -1194,7 +1207,7 @@ $('#trBtn').onclick=trashUI;
 $('#fltDone').onclick=()=>$('#fltWrap').classList.remove('open');
 $('#fltClr').onclick=()=>{pfs.clear();tf.clear();sf.clear();render()};
 $('#fltPop').addEventListener('change',e=>{const c=e.target.closest('input[data-fk]');if(!c)return;const S=c.dataset.fk=='p'?pfs:tf,v=c.dataset.v;if(c.checked)S.add(v);else S.delete(v);render()});
-$('#fltPop').addEventListener('click',e=>{const h=e.target.closest('.fxh');if(h){const k=h.dataset.fx;fxOpen[k]=!fxOpen[k];fltRender();if(fxOpen[k]){const qi=h.closest('.fx').querySelector('.fxq');if(qi&&qi.style.display!='none')qi.focus()}return}const c=e.target.closest('.fxc');if(c){(c.dataset.fc=='p'?pfs:tf).clear();render()}});
+$('#fltPop').addEventListener('click',e=>{const tm=e.target.closest('[data-tfm]');if(tm){tfAll=tm.dataset.tfm=='all';render();return}const h=e.target.closest('.fxh');if(h){const k=h.dataset.fx;fxOpen[k]=!fxOpen[k];fltRender();if(fxOpen[k]){const qi=h.closest('.fx').querySelector('.fxq');if(qi&&qi.style.display!='none')qi.focus()}return}const c=e.target.closest('.fxc');if(c){(c.dataset.fc=='p'?pfs:tf).clear();render()}});
 $('#fltPop').addEventListener('input',e=>{const qi=e.target.closest('.fxq');if(!qi)return;fxQ[qi.dataset.fq]=qi.value;fltRender()});
 $('#fchips').addEventListener('click',e=>{const c=e.target.closest('[data-chip]');if(!c)return;const k=c.dataset.chip,v=c.dataset.v;if(k=='all'){pfs.clear();tf.clear();sf.clear()}else if(k=='p')pfs.delete(v);else if(k=='t')tf.delete(v);else sf.delete(v);render()});
 $('#sfPop').onclick=e=>{const b=e.target.closest('[data-st]');if(!b)return;const v=b.dataset.st;if(v=='__c')sf.clear();else sf.has(v)?sf.delete(v):sf.add(v);render()};
@@ -1204,13 +1217,13 @@ $('#thBtn').onclick=()=>{theme=theme=='auto'?'light':theme=='light'?'dark':'auto
 $('#owBtn').onclick=onWorking;$('#logBtn').onclick=showLog;
 sc.onpointerdown=e=>{if(!isG()||e.pointerType=='touch'||e.button||e.target.closest('.lc'))return;
  const b=e.target.closest('.bar');
- if(b&&canW&&!b.dataset.virt){const t=tasks.find(y=>y.id==b.dataset.id);if(!t)return;const i=b.dataset.s,x=i!=null&&i!==''?t.subs[i]:t;bd={b,t,i,x,h:e.target.dataset.h||'m',x0:e.clientX,s:n(x.start),f:n(x.end),m:0};return}
+ if(b&&canW&&!b.dataset.virt){const t=tasks.find(y=>y.id==b.dataset.id);if(!t)return;const i=b.dataset.s,x=i!=null&&i!==''?t.subs[i]:t;bd={b,t,i,x,h:e.target.dataset.h||'m',x0:e.clientX,s:n(x.start),f:n(x.end),m:0};if(bd.h=='m')ffPrev(bd);return}
  if(b&&b.dataset.virt)return;
  if(e.pointerType=='mouse')dg={x:e.clientX,day0:G.ws+sc.scrollLeft/G.p,m:0}};
 addEventListener('pointermove',e=>{
  if(bd){const dx=e.clientX-bd.x0;if(Math.abs(dx)>4)bd.m=1;if(!bd.m)return;const k=Math.round(dx/G.p);let s=bd.s,f=bd.f;
   if(bd.h=='m'){s+=k;f+=k}else if(bd.h=='l')s=Math.min(s+k,f);else f=Math.max(f+k,s);
-  bd.ns=s;bd.nf=f;bd.b.style.left=(s-G.ws)*G.p+'px';bd.b.style.width=(f+1-s)*G.p+'px';sc.classList.add('dr');if(depI().S.size)drawDeps();
+  bd.ns=s;bd.nf=f;bd.b.style.left=(s-G.ws)*G.p+'px';bd.b.style.width=(f+1-s)*G.p+'px';(bd.g||[]).forEach(o=>{o.el.style.left=(o.l0+(s-bd.s)*G.p)+'px'});sc.classList.add('dr');if(depI().S.size)drawDeps();
   const tip=$('#dgTip');tip.hidden=false;tip.innerHTML=`<b>${bd.h=='l'?'⇤ ปรับวันเริ่ม':bd.h=='r'?'ปรับวันจบ ⇥':'↔ ย้ายงาน'}</b>${fr(iso(s),iso(f))} <small>(${f-s+1} วัน)</small>`;tip.style.left=Math.min(innerWidth-tip.offsetWidth-8,e.clientX+14)+'px';tip.style.top=(e.clientY+18)+'px';return}
  if(!dg)return;const dx=e.clientX-dg.x;if(Math.abs(dx)>4)dg.m=1;if(dg.m){sc.scrollLeft=Math.max(0,(dg.day0-dx/G.p-G.ws)*G.p);sc.classList.add('dr');if(!shifting)edgeCheck()}});
 addEventListener('pointerup',async()=>{
@@ -1220,16 +1233,18 @@ addEventListener('pointerup',async()=>{
   const oldR=fr(iso(d.s),iso(d.f)),newR=fr(a,z);logAct('เลื่อนวันที่',isSub?d.x.title+' ('+d.t.title+')':d.t.title,oldR+' → '+newR,d.t.id);
   if(!isSub&&isRep(d.t)){const f={start:a,end:z};if(d.t.occ&&d.t.start!=a)f.occ=remapOcc(d.t.occ,d.t.start,a,d.t.repeat,d.t.repeat);await patch(d.t.id,f);return}
   {const W=cloneT(tasks),wt=W.find(x=>x.id==d.t.id),node=wt&&(isSub?(wt.subs||[])[+d.i]:wt);if(!node){render();return}node.start=a;node.end=z;
-    {const dns=depNormAll(wt,node);if(dns.length){const IX=depIndex(W).N,raw=depsRaw(node).map(z=>({...z}));dns.forEach(dn=>{const pn=IX.get(dn.ref);if(pn&&hasD(pn.y))raw[dn.ix].lag=depLagOf(dn.type,pn.y,node)});node.dep=raw[0];if(Array.isArray(node.deps)&&node.deps.length)node.deps=raw}}
-   const key=isSub?(node.sid?wt.id+':'+node.sid:wt.id+'#'+d.i):wt.id,ch=depPropagate(W,[key]);ch.add(wt.id);
-   const mv=await depWrite(W,[wt.id,...[...ch].filter(x=>x!=wt.id)],key);if(mv)toast('🔗 เลื่อนงานที่เชื่อมโยงตามไปด้วย '+mv+' งาน')}return}
+    const key=nodeKey(wt,node,isSub?d.i:null),delta=d.ns-d.s,IX=depIndex(W),grp=d.h=='m'&&delta?ffGroup(key,IX):new Set([key]),extra=[];
+    grp.forEach(k=>{if(k===key)return;const m=IX.N.get(k);if(m&&hasD(m.y)){m.y.start=iso(n(m.y.start)+delta);m.y.end=iso(n(m.y.end)+delta);extra.push(m.t.id)}});
+    grp.forEach(k=>{const m=IX.N.get(k);if(!m)return;const dns=depNormAll(m.t,m.y);if(!dns.length)return;const raw=depsRaw(m.y).map(z0=>({...z0}));dns.forEach(dn=>{const pn=IX.N.get(dn.ref);if(pn&&hasD(pn.y)&&!grp.has(dn.ref))raw[dn.ix].lag=depLagOf(dn.type,pn.y,m.y)});m.y.dep=raw[0];if(Array.isArray(m.y.deps)&&m.y.deps.length)m.y.deps=raw});
+    const ch=depPropagate(W,[...grp]);ch.add(wt.id);extra.forEach(x=>ch.add(x));
+    const mv=await depWrite(W,[wt.id,...[...ch].filter(x=>x!=wt.id)],key);if(mv)toast('🔗 เลื่อนงานที่เชื่อมโยงตามไปด้วย '+mv+' งาน')}return}
  if(dg&&dg.m)sup=Date.now();dg=null;sc.classList.remove('dr')});
 
-function exportTasks(){const tOk=(a,b)=>!tf.size||(a||[]).some(x=>tf.has(x))||(b||[]).some(x=>tf.has(x)),qk=ti=>!sq||String(ti||'').toLowerCase().includes(sq),so=x=>!sf.size||sf.has(st(x)),res=[];
+function exportTasks(){const tOk=tagMatch,qk=ti=>!sq||String(ti||'').toLowerCase().includes(sq),so=x=>!sf.size||sf.has(st(x)),res=[];
  sortT().forEach(t=>{if(t.hidden&&!showH)return;const S=t.subs||[];
   if(S.length){const subs=S.filter(x=>(showH||!x.hidden)&&pfOk(eoF(t,x))&&tOk(t.tags,x.tags)&&(qk(t.title)||qk(x.title))&&so(x));if(subs.length)res.push({...t,subs})}
   else if(pfOk(t.owners)&&tOk(t.tags)&&qk(t.title)&&so(t))res.push(t)});return res}
-function fltNote(){const a=[pfs.size&&'คน: '+[...pfs].join(', '),tf.size&&'แท็ก: '+[...tf].join(', '),sf.size&&'สถานะ: '+[...sf].map(k=>ST[k]).join(', '),sq&&'ค้นหา: '+sq].filter(Boolean);return a.length?' · ตัวกรอง — '+a.join(' / '):''}
+function fltNote(){const a=[pfs.size&&'คน: '+[...pfs].join(', '),tf.size&&'แท็ก: '+[...tf].join(', ')+(tfAll&&tf.size>1?' (ครบทุกอัน)':''),sf.size&&'สถานะ: '+[...sf].map(k=>ST[k]).join(', '),sq&&'ค้นหา: '+sq].filter(Boolean);return a.length?' · ตัวกรอง — '+a.join(' / '):''}
 function buildPrintable(){
  const line=(label,val)=>val?`<div class="pline">${label}: ${esc(val)}</div>`:'';
  const header=`<h1>${esc(boardTitle)}</h1><div class="pmeta">พิมพ์เมื่อ ${dd(iso(Math.floor(now())))}${esc(fltNote())}</div>`;
